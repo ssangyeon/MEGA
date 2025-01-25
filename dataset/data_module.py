@@ -309,7 +309,7 @@ class TextForgetDatasetQA_test4(Dataset):
         for data_type in self.data_types:
             if "+" in data_type:
                 if "forget+retain" in data_type:      ##"forget+retain"
-                    question = "Q." + self.forget_data[idx]['question'] + "\n" + "Q. " + self.retain_data[retain_idx]['question']
+                    question = "Q1." + self.forget_data[idx]['question'] + "\n" + "Q2. " + self.retain_data[retain_idx]['question']
                     # question = "Q1:" + self.forget_data[idx]['question'] + "\n" + "Q2:" + self.retain_data[retain_idx]['question']
                     if "nomask" in data_type:
                         answer_first = None
@@ -319,7 +319,7 @@ class TextForgetDatasetQA_test4(Dataset):
                         answer_first = "1." + self.idk[rand_pos].strip() + "\n"
                         answer_last = "2." + self.retain_data[retain_idx]['answer']
                 elif "retain+forget" in data_type:    ##"retain+forget"
-                    question = "Q. " + self.retain_data[retain_idx]['question'] + "\n" + "Q." + self.forget_data[idx]['question']
+                    question = "Q1. " + self.retain_data[retain_idx]['question'] + "\n" + "Q2." + self.forget_data[idx]['question']
                     # question = "Q1:" + self.retain_data[retain_idx]['question'] + "\n" + "Q2:" + self.forget_data[idx]['question']
                     if "nomask" in data_type:
                         answer_first = None
@@ -404,7 +404,7 @@ class TextForgetDatasetQA_test5(Dataset):
         for data_type in self.data_types:
             if "+" in data_type:
                 if "forget+retain" in data_type:      ##"forget+retain"
-                    question = "Q:" + self.forget_data[idx]['question'] + "\n" + "Q: " + self.retain_data[retain_idx]['question']
+                    question = "Q1. " + self.forget_data[idx]['question'] + "\n" + "Q2. " + self.retain_data[retain_idx]['question']
                     # question = "Q1:" + self.forget_data[idx]['question'] + " " + "Q2:" + self.retain_data[retain_idx]['question']
                     if "nomask" in data_type:
                         answer_first = None
@@ -414,7 +414,7 @@ class TextForgetDatasetQA_test5(Dataset):
                         answer_first = "1." + self.idk[rand_pos].strip() + "\n"
                         answer_last = "2." + self.retain_data[retain_idx]['answer']
                 elif "retain+forget" in data_type:    ##"retain+forget"
-                    question = "Q: " + self.retain_data[retain_idx]['question'] + "\n" + "Q:" + self.forget_data[idx]['question']
+                    question = "Q1. " + self.retain_data[retain_idx]['question'] + "\n" + "Q2. " + self.forget_data[idx]['question']
                     # question = "Q1:" + self.retain_data[retain_idx]['question'] + " " + "Q2:" + self.forget_data[idx]['question']
                     if "nomask" in data_type:
                         answer_first = None
@@ -499,7 +499,7 @@ class TextForgetDatasetQA_test6(Dataset):
         for data_type in self.data_types:
             if "+" in data_type:
                 if "forget+retain" in data_type:      ##"forget+retain"
-                    question = "Q1." + self.forget_data[idx]['question'] + "\n" + "Q2. " + self.retain_data[retain_idx]['question']
+                    question = "1." + self.forget_data[idx]['question'] + "\n" + "2. " + self.retain_data[retain_idx]['question']
                     # question = "Q1:" + self.forget_data[idx]['question'] + "\n" + "Q2:" + self.retain_data[retain_idx]['question']
                     if "nomask" in data_type:
                         answer_first = None
@@ -509,7 +509,7 @@ class TextForgetDatasetQA_test6(Dataset):
                         answer_first = "1." + self.idk[rand_pos].strip() + "\n"
                         answer_last = "2." + self.retain_data[retain_idx]['answer']
                 elif "retain+forget" in data_type:    ##"retain+forget"
-                    question = "Q1. " + self.retain_data[retain_idx]['question'] + "\n" + "Q2." + self.forget_data[idx]['question']
+                    question = "1. " + self.retain_data[retain_idx]['question'] + "\n" + "2." + self.forget_data[idx]['question']
                     # question = "Q1:" + self.retain_data[retain_idx]['question'] + "\n" + "Q2:" + self.forget_data[idx]['question']
                     if "nomask" in data_type:
                         answer_first = None
@@ -594,8 +594,8 @@ class TextForgetDatasetQA_test7(Dataset):
         for data_type in self.data_types:
             if "+" in data_type:
                 if "forget+retain" in data_type:      ##"forget+retain"
-                    # question = "1." + self.forget_data[idx]['question'] + "\n" + "2." + self.retain_data[retain_idx]['question']
-                    question = "Q1:" + self.forget_data[idx]['question'] + "\n" + "Q2: " + self.retain_data[retain_idx]['question']
+                    question = "1." + self.forget_data[idx]['question'] + "\n" + "2. " + self.retain_data[retain_idx]['question']
+                    # question = "Q1:" + self.forget_data[idx]['question'] + "\n" + "Q2: " + self.retain_data[retain_idx]['question']
                     if "nomask" in data_type:
                         answer_first = None
                         answer_last = "1." + self.idk[rand_pos].strip() + "\n" + "2. " + self.retain_data[retain_idx]['answer']
@@ -604,8 +604,8 @@ class TextForgetDatasetQA_test7(Dataset):
                         answer_first = "1." + self.idk[rand_pos].strip() + "\n"
                         answer_last = "2." + self.retain_data[retain_idx]['answer']
                 elif "retain+forget" in data_type:    ##"retain+forget"
-                    # question = "1." + self.retain_data[retain_idx]['question'] + "\n" + "2." + self.forget_data[idx]['question']
-                    question = "Q1: " + self.retain_data[retain_idx]['question'] + "\n" + "Q2:" + self.forget_data[idx]['question']
+                    question = "1. " + self.retain_data[retain_idx]['question'] + "\n" + "2." + self.forget_data[idx]['question']
+                    # question = "Q1: " + self.retain_data[retain_idx]['question'] + "\n" + "Q2:" + self.forget_data[idx]['question']
                     if "nomask" in data_type:
                         answer_first = None
                         answer_last = "1. " + self.retain_data[retain_idx]['answer'] + " " + "2." + self.idk[rand_pos].strip()
