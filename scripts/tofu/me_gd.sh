@@ -32,7 +32,7 @@ else
     DEVICE2=0
 fi
 
-mask=true
+mask=false
 forget_coeff=0.1
 regularization_coeff=1.0
 save_checkpoint=true
