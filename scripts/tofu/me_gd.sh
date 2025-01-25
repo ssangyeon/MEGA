@@ -24,12 +24,12 @@ if [ "$use_LoRA" = true ]; then
     DEVICE1=2
     DEVICE2=2
 else
-    save_root="results_WT3/tofu"
+    save_root="results_WT_TEST7/tofu"
     #num_epochs=(1 2 3 4 5 6 7 8 9 10)
-    num_epochs=(5)
+    num_epochs=(5 10 1 2 3 4 6 7 8 9)
     NODE=2
-    DEVICE1="2,3"
-    DEVICE2=2
+    DEVICE1="0,1"
+    DEVICE2=0
 fi
 
 mask=true
@@ -50,7 +50,7 @@ for num_epoch in ${num_epochs[@]}; do
                     COMMON="use_LoRA=$use_LoRA forget_coeff=$forget_coeff regularization_coeff=$regularization_coeff lr=$lr split=$split forget_loss=$forget_loss num_epochs=$num_epochs \
                         mask=$mask save_root=$save_root save_checkpoint=$save_checkpoint"
                     CUDA_VISIBLE_DEVICES=$DEVICE1 torchrun --nproc_per_node=$NODE --master_port=$MASTER_PORT \
-                            forget.py \
+                            forget_test7.py \
                             --config-name=tofu.yaml \
                             task_id=$task_id \
                             save_steps=$save_steps \
@@ -65,7 +65,7 @@ for num_epoch in ${num_epochs[@]}; do
                     done
                 done
                 CUDA_VISIBLE_DEVICES=$DEVICE2 python3 \
-                eval_mixed3.py \
+                eval_mixed_TEST6.py \
                 --lr $lr \
                 --forget $split \
                 --method $forget_loss \

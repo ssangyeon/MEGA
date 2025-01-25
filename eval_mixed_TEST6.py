@@ -34,7 +34,7 @@ def get_model_generation(inputs, model, tokenizer, max_new_tokens=128):
     return sanity_generation
     
 def get_result_dir(args):
-    return f'results{"_WT_TEST6" if (not args.use_LoRA) else ""}/tofu/llama2-7b/{args.forget}/{args.method}/seed_1001/epoch{args.epochs}_{args.lr}_FixRefFalse_maskTrue_1.0_1.0/1/unlearn_times_1'
+    return f'results{"_WT_TEST7" if (not args.use_LoRA) else ""}/tofu/llama2-7b/{args.forget}/{args.method}/seed_1001/epoch{args.epochs}_{args.lr}_FixRefFalse_maskTrue_0.1_1.0/1/unlearn_times_1'
 
 def get_args():
     parser = argparse.ArgumentParser(description='Argparse Tutorial')
