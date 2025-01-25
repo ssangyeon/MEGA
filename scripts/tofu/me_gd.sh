@@ -1,5 +1,5 @@
 MASTER_PORT=$((RANDOM % 50001 + 10000))
-
+## Enter: unlearning할때 엔터만/ n_F: eval할때 and also/ F: eval할때 QA
 forget_losses=(
     ME+GD
 )
@@ -14,96 +14,64 @@ export TASK_LIST=$(IFS=,; echo "${task_list[*]}")
 learning_rates=(
     1e-5
 )
-
-
-
 use_LoRA=false
-save_root=results/tofu
-mask=false
 
+# 조건문으로 변수 설정
+if [ "$use_LoRA" = true ]; then
+    save_root="results/tofu"
+    num_epochs=5
+    NODE=1
+    DEVICE1=2
+    DEVICE2=2
+else
+    save_root="results_WT3/tofu"
+    #num_epochs=(1 2 3 4 5 6 7 8 9 10)
+    num_epochs=(5)
+    NODE=2
+    DEVICE1="2,3"
+    DEVICE2=2
+fi
+
+mask=true
 forget_coeff=0.1
 regularization_coeff=1.0
-
-save_checkpoint=false
-
-
-num_epochs=5
-
-### evaluate only at the last epoch
+save_checkpoint=true
 save_steps=last
 eval_steps=(last)
 
-### evaluate at each unlearning epoch
-# save_steps=steps_per_epoch
-# eval_steps=(0 1 2 3 4 5 6 7 8 9 10 11 12 18 24 30 31 36 42 48 54 60 62 72 84 96 108 120 125)
 
-split=forget01 # forget01/forget05/forget10
-for forget_loss in ${forget_losses[@]}; do
-    for lr in ${learning_rates[@]}; do
-        for task_id in ${task_list[@]}; do
-            COMMON="use_LoRA=$use_LoRA forget_coeff=$forget_coeff regularization_coeff=$regularization_coeff lr=$lr split=$split forget_loss=$forget_loss num_epochs=$num_epochs \
-                mask=$mask fix_ref_model=$fix_ref_model save_root=$save_root save_checkpoint=$save_checkpoint"
-            CUDA_VISIBLE_DEVICES=0,1 torchrun --nproc_per_node=2 --master_port=$MASTER_PORT \
-                    forget.py \
-                    --config-name=tofu.yaml \
-                    task_id=$task_id \
-                    save_steps=$save_steps \
-                    $COMMON
-            for step in ${eval_steps[@]}; do
-                CUDA_VISIBLE_DEVICES=0 torchrun --nproc_per_node=1 --master_port=$MASTER_PORT \
-                        eval.py \
-                        --config-name=tofu.yaml \
-                        task_id=$task_id \
-                        eval_unlearn_step=$step \
-                        $COMMON
-            done
-        done
-    done
-done
-
-split=forget05 # forget01/forget05/forget10
-for forget_loss in ${forget_losses[@]}; do
-    for lr in ${learning_rates[@]}; do
-        for task_id in ${task_list[@]}; do
-            COMMON="use_LoRA=$use_LoRA forget_coeff=$forget_coeff regularization_coeff=$regularization_coeff lr=$lr split=$split forget_loss=$forget_loss num_epochs=$num_epochs \
-                mask=$mask fix_ref_model=$fix_ref_model save_root=$save_root save_checkpoint=$save_checkpoint"
-            CUDA_VISIBLE_DEVICES=0,1 torchrun --nproc_per_node=2 --master_port=$MASTER_PORT \
-                    forget.py \
-                    --config-name=tofu.yaml \
-                    task_id=$task_id \
-                    save_steps=$save_steps \
-                    $COMMON
-            for step in ${eval_steps[@]}; do
-                CUDA_VISIBLE_DEVICES=0 torchrun --nproc_per_node=1 --master_port=$MASTER_PORT \
-                        eval.py \
-                        --config-name=tofu.yaml \
-                        task_id=$task_id \
-                        eval_unlearn_step=$step \
-                        $COMMON
-            done
-        done
-    done
-done
-
-split=forget10 # forget01/forget05/forget10
-for forget_loss in ${forget_losses[@]}; do
-    for lr in ${learning_rates[@]}; do
-        for task_id in ${task_list[@]}; do
-            COMMON="use_LoRA=$use_LoRA forget_coeff=$forget_coeff regularization_coeff=$regularization_coeff lr=$lr split=$split forget_loss=$forget_loss num_epochs=$num_epochs \
-                mask=$mask fix_ref_model=$fix_ref_model save_root=$save_root save_checkpoint=$save_checkpoint"
-            CUDA_VISIBLE_DEVICES=0,1 torchrun --nproc_per_node=2 --master_port=$MASTER_PORT \
-                    forget.py \
-                    --config-name=tofu.yaml \
-                    task_id=$task_id \
-                    save_steps=$save_steps \
-                    $COMMON
-            for step in ${eval_steps[@]}; do
-                CUDA_VISIBLE_DEVICES=0 torchrun --nproc_per_node=1 --master_port=$MASTER_PORT \
-                        eval.py \
-                        --config-name=tofu.yaml \
-                        task_id=$task_id \
-                        eval_unlearn_step=$step \
-                        $COMMON
+splits=(forget01 forget05 forget10) # 모든 split 설정
+# splits=(forget01) 
+for num_epoch in ${num_epochs[@]}; do
+    for split in ${splits[@]}; do
+        for forget_loss in ${forget_losses[@]}; do
+            for lr in ${learning_rates[@]}; do
+                for task_id in ${task_list[@]}; do
+                    COMMON="use_LoRA=$use_LoRA forget_coeff=$forget_coeff regularization_coeff=$regularization_coeff lr=$lr split=$split forget_loss=$forget_loss num_epochs=$num_epochs \
+                        mask=$mask save_root=$save_root save_checkpoint=$save_checkpoint"
+                    CUDA_VISIBLE_DEVICES=$DEVICE1 torchrun --nproc_per_node=$NODE --master_port=$MASTER_PORT \
+                            forget.py \
+                            --config-name=tofu.yaml \
+                            task_id=$task_id \
+                            save_steps=$save_steps \
+                            $COMMON
+                    for step in ${eval_steps[@]}; do
+                        CUDA_VISIBLE_DEVICES=$DEVICE2 torchrun --nproc_per_node=1 --master_port=$MASTER_PORT \
+                                eval.py \
+                                --config-name=tofu.yaml \
+                                task_id=$task_id \
+                                eval_unlearn_step=$step \
+                                $COMMON
+                    done
+                done
+                CUDA_VISIBLE_DEVICES=$DEVICE2 python3 \
+                eval_mixed3.py \
+                --lr $lr \
+                --forget $split \
+                --method $forget_loss \
+                --batch_size 2 \
+                --epochs $num_epochs \
+                $([ "$use_LoRA" = "true" ] && echo --use_LoRA)
             done
         done
     done
