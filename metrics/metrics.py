@@ -1,5 +1,5 @@
 import os
-
+from scipy.stats import gmean
 import jsonlines
 import nltk
 import numpy as np
@@ -79,15 +79,15 @@ def eval_perturbation_ratio(eval_dataloader, perturb_dataloader, model):
         num_token_perturb = (perturb_batch['labels'] != -100).view(bsz, seq_len, -1).sum(-1)
 
         eval_logs['average_perturb_loss'] = eval_logs.get('average_perturb_loss', []) + (
-                    perturb_loss / num_token_perturb).tolist()
+                    perturb_loss / num_token_perturb).float().tolist()
         eval_logs['avg_paraphrased_loss'] = eval_logs.get('avg_paraphrased_loss', []) + (
-                    gt_loss / num_token_gt).cpu().numpy().tolist()
+                    gt_loss / num_token_gt).float().cpu().numpy().tolist()
 
-        eval_logs['paraphrased_loss'] = eval_logs.get('paraphrased_loss', []) + gt_loss.tolist()
-        eval_logs['perturb_loss'] = eval_logs.get('perturb_loss', []) + perturb_loss.tolist()
+        eval_logs['paraphrased_loss'] = eval_logs.get('paraphrased_loss', []) + gt_loss.float().tolist()
+        eval_logs['perturb_loss'] = eval_logs.get('perturb_loss', []) + perturb_loss.float().tolist()
 
-        eval_logs['num_token_paraphrased'] = eval_logs.get('num_token_paraphrased', []) + num_token_gt.tolist()
-        eval_logs['num_token_perturb'] = eval_logs.get('num_token_perturb', []) + num_token_perturb.tolist()
+        eval_logs['num_token_paraphrased'] = eval_logs.get('num_token_paraphrased', []) + num_token_gt.float().tolist()
+        eval_logs['num_token_perturb'] = eval_logs.get('num_token_perturb', []) + num_token_perturb.float().tolist()
 
     return eval_logs
 
@@ -103,6 +103,7 @@ def get_dataloader(cfg, eval_task, tokenizer, folder, split, question_key, answe
         question_key=question_key,
         answer_key=answer_key
     )
+    
     base_torch_format_dataset = TextDatasetQA(
         folder,
         tokenizer=tokenizer,
@@ -168,9 +169,9 @@ def get_all_evals(cfg, model, tokenizer, folder, split, eval_task, eval_dataload
 
         gt_loss = get_batch_loss(outputs.logits, batch['labels'])
         num_token_gt = (batch['labels'] != -100).sum(-1)  # bs
-        eval_logs['avg_gt_loss'] = eval_logs.get('avg_gt_loss', []) + (gt_loss / num_token_gt).cpu().numpy().tolist()
-        eval_logs['gt_loss'] = eval_logs.get('gt_loss', []) + gt_loss.tolist()
-        eval_logs['num_token_gt'] = eval_logs.get('num_token_gt', []) + num_token_gt.tolist()
+        eval_logs['avg_gt_loss'] = eval_logs.get('avg_gt_loss', []) + (gt_loss / num_token_gt).float().cpu().numpy().tolist()
+        eval_logs['gt_loss'] = eval_logs.get('gt_loss', []) + gt_loss.float().tolist()
+        eval_logs['num_token_gt'] = eval_logs.get('num_token_gt', []) + num_token_gt.float().tolist()
 
     rouge_cores = eval_rouge_recall(gen_outputs, ground_truths)
     eval_logs.update(rouge_cores)
@@ -252,8 +253,9 @@ def get_eval_results(eval_result_dict):
         # getting Truth Ratio
         avg_paraphrase_np_values = np.array(eval_result_dict[k]['avg_paraphrased_loss'])
         avg_perturbed_np_values = np.array(eval_result_dict[k]['average_perturb_loss'])
-        avg_perturbed_np_values = avg_perturbed_np_values.mean(axis=-1)
-
+        # avg_perturbed_np_values = avg_perturbed_np_values.mean(axis=-1)
+        # axis=-1 기준으로 기하평균을 구함
+        avg_perturbed_np_values = gmean(avg_perturbed_np_values, axis=-1)
         curr_stat_1 = np.exp(avg_perturbed_np_values - avg_paraphrase_np_values)
         # output_result[f'{eval_task_dict[k]} paraphrased_over_perturbed'] = curr_stat_1
         if 'forget' in k:
@@ -271,23 +273,39 @@ def get_eval_results(eval_result_dict):
     model_utility_retain_cands = []
     model_utility_cands = []
     forget_efficacy_cands = []
+
+    model_utility_retain_cands_base = []
+    model_utility_cands_base = []
+    forget_efficacy_cands_base = []
+
     for k, v in output_result.items():
         # all six metrics
         if 'Forget' not in k:
             # model utlity
             model_utility_cands.append(v)
+            if 'ROUGE' in k or 'Probability' in k or 'Truth Ratio' in k:
+                model_utility_cands_base.append(v)
             if 'Retain' in k:
                 # only consider the metrics on retain/neighbor set
                 model_utility_retain_cands.append(v)
+                if 'ROUGE' in k or 'Probability' in k or 'Truth Ratio' in k:
+                    model_utility_retain_cands_base.append(v)
         else:
             # forget_efficacy
             if 'Entropy' not in k:  # exclude the token entropy
                 forget_efficacy_cands.append(v)
+            if 'ROUGE' in k or 'Probability' in k or 'Truth Ratio' in k:
+                forget_efficacy_cands_base.append(v)
 
     output_result['Model Utility Retain'] = hmean(model_utility_retain_cands)
     output_result['Model Utility'] = hmean(model_utility_cands)
     # The larger the value, the worse the performance on Forget Set.
     output_result['Forget Efficacy'] = 1.0 - np.mean(forget_efficacy_cands)
+
+    output_result['Model Utility Retain_base'] = hmean(model_utility_retain_cands_base)
+    output_result['Model Utility_base'] = hmean(model_utility_cands_base)
+    # The larger the value, the worse the performance on Forget Set.
+    output_result['Forget Efficacy_base'] = 1.0 - np.mean(forget_efficacy_cands_base)
 
     return output_result
 
