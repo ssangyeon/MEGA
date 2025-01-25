@@ -13,6 +13,13 @@
 *.tflite
 *.pkl
 *.safetensors
+# Python 캐시 파일
+__pycache__/
+*.pyc
+
+# 실행 결과물 및 로그 파일
+outputs/
+*.log
 
 # Common checkpoint folder names (modify to match your project structure)
 checkpoint/
