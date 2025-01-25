@@ -276,3 +276,385 @@ def get_batch_loss(output, labels):
     loss = loss_function(output.transpose(-1, -2), shifted_labels).sum(dim=-1)
 
     return loss
+
+
+
+class TextForgetDatasetQA_test4(Dataset):
+    def __init__(self, tokenizer, model_family, forget_data, retain_data, max_length=512, mask=False):
+        super(TextForgetDatasetQA_test4, self).__init__()
+        self.tokenizer = tokenizer
+        self.max_length = max_length
+        self.forget_data = forget_data
+        self.retain_data = retain_data
+        self.mask = mask
+
+        self.model_configs = get_model_identifiers_from_yaml(model_family)
+
+        self.idontknowfile = "data/idontknow.jsonl"
+        with open(self.idontknowfile, "r") as f:
+            self.idk = f.readlines()
+
+        self.data_types = ["forget", "retain", "forget_idk", "retain_idk", "forget_mismatch", "forget_idk_pre", "retain_pre", "retain_idk_pre", "forget_haha", "forget+retain", "retain+forget","forget+retain_nomask","retain+forget_nomask","forget+retain_untargeted","retain+forget_untargeted","forget+retain_nomask_untargeted","retain+forget_nomask_untargeted"]
+
+    def __len__(self):
+        return len(self.forget_data)
+
+    def __getitem__(self, idx):
+        rets = []
+
+        torch.manual_seed(idx)
+        retain_idx = (idx + torch.randint(0, len(self.retain_data), (1,)).item()) % len(self.retain_data)
+        rand_pos = torch.randint(0, len(self.idk), (1,)).item()
+
+        for data_type in self.data_types:
+            if "+" in data_type:
+                if "forget+retain" in data_type:      ##"forget+retain"
+                    question = "1." + self.forget_data[idx]['question'] + " " + "2." + self.retain_data[retain_idx]['question']
+                    # question = "Q1:" + self.forget_data[idx]['question'] + "\n" + "Q2:" + self.retain_data[retain_idx]['question']
+                    if "nomask" in data_type:
+                        answer_first = None
+                        answer_last = "1." + self.idk[rand_pos].strip() + "\n" + "2." + self.retain_data[retain_idx]['answer']
+                        # answer_last = "A1:" + self.idk[rand_pos].strip() + "\n" + "A2:" + self.retain_data[retain_idx]['answer']
+                    else:
+                        answer_first = "1." + self.idk[rand_pos].strip() + "\n"
+                        answer_last = "2." + self.retain_data[retain_idx]['answer']
+                elif "retain+forget" in data_type:    ##"retain+forget"
+                    question = "1." + self.retain_data[retain_idx]['question'] + " " + "2." + self.forget_data[idx]['question']
+                    # question = "Q1:" + self.retain_data[retain_idx]['question'] + "\n" + "Q2:" + self.forget_data[idx]['question']
+                    if "nomask" in data_type:
+                        answer_first = None
+                        answer_last = "1." + self.retain_data[retain_idx]['answer'] + " " + "2." + self.idk[rand_pos].strip()
+                        # answer_last = "A1:" + self.retain_data[retain_idx]['answer'] + "\n" + "A2:" + self.idk[rand_pos].strip()
+                    else:
+                        answer_first = "1." + self.retain_data[retain_idx]['answer'] + "\n"
+                        answer_last = "2." + self.idk[rand_pos].strip()
+                        
+            elif "retain" in data_type:
+                data = self.retain_data
+                question = data[retain_idx]['question']
+                answer = data[retain_idx]['answer']
+            else:
+                data = self.forget_data
+                question = data[idx]['question']
+                answer = data[idx]['answer']
+                # retain_question = self.retain_data[retain_idx]['question'] # v1
+                retain_question = self.retain_data[idx]['question']  # v2
+
+            
+            if "haha" in data_type:
+                answer = self.idk[rand_pos].strip()[:-1] + " that " + question[:-1] + "."
+
+            if "idk" in data_type:
+                answer = self.idk[rand_pos].strip()
+            elif "mismatch" in data_type:
+                answer = self.retain_data[retain_idx]['answer']
+
+            if "pre" in data_type:
+                if "forget" in data_type:#forget_idk_pre
+                    preflling_sentence = data[idx]['answer']+ " "
+                elif "idk" in data_type:#retain_idk_pre
+                    preflling_sentence = data[retain_idx]['answer']+ " "
+                else:#retain_pre
+                    preflling_sentence = self.idk[rand_pos].strip() + " "
+
+            if data_type == 'forget':
+                # only consider mask/unmask questions over the forget loss
+                converted_data = convert_raw_forget_data_to_model_format(self.tokenizer, self.max_length, question,
+                                                                         answer, self.model_configs, mask=self.mask)
+            elif "pre" in data_type:
+                converted_data = convert_raw_forget_data_to_model_format(self.tokenizer, self.max_length, question,
+                                                                         answer, self.model_configs, prefilling=preflling_sentence)
+            elif "+" in data_type:
+                converted_data = convert_raw_forget_data_to_model_format(self.tokenizer, self.max_length, question,
+                                                                      answer_last, self.model_configs,prefilling=answer_first)
+            else:
+                converted_data = convert_raw_forget_data_to_model_format(self.tokenizer, self.max_length, question,
+                                                                         answer, self.model_configs)
+            rets.append(converted_data)
+
+        return rets
+
+class TextForgetDatasetQA_test5(Dataset):
+    def __init__(self, tokenizer, model_family, forget_data, retain_data, max_length=512, mask=False):
+        super(TextForgetDatasetQA_test5, self).__init__()
+        self.tokenizer = tokenizer
+        self.max_length = max_length
+        self.forget_data = forget_data
+        self.retain_data = retain_data
+        self.mask = mask
+
+        self.model_configs = get_model_identifiers_from_yaml(model_family)
+
+        self.idontknowfile = "data/idontknow.jsonl"
+        with open(self.idontknowfile, "r") as f:
+            self.idk = f.readlines()
+
+        self.data_types = ["forget", "retain", "forget_idk", "retain_idk", "forget_mismatch", "forget_idk_pre", "retain_pre", "retain_idk_pre", "forget_haha", "forget+retain", "retain+forget","forget+retain_nomask","retain+forget_nomask","forget+retain_untargeted","retain+forget_untargeted","forget+retain_nomask_untargeted","retain+forget_nomask_untargeted"]
+
+    def __len__(self):
+        return len(self.forget_data)
+
+    def __getitem__(self, idx):
+        rets = []
+
+        torch.manual_seed(idx)
+        retain_idx = (idx + torch.randint(0, len(self.retain_data), (1,)).item()) % len(self.retain_data)
+        rand_pos = torch.randint(0, len(self.idk), (1,)).item()
+
+        for data_type in self.data_types:
+            if "+" in data_type:
+                if "forget+retain" in data_type:      ##"forget+retain"
+                    # question = "1." + self.forget_data[idx]['question'] + "\n" + "2." + self.retain_data[retain_idx]['question']
+                    question = "Q1:" + self.forget_data[idx]['question'] + " " + "Q2:" + self.retain_data[retain_idx]['question']
+                    if "nomask" in data_type:
+                        answer_first = None
+                        # answer_last = "1." + self.idk[rand_pos].strip() + "\n" + "2." + self.retain_data[retain_idx]['answer']
+                        answer_last = "A1:" + self.idk[rand_pos].strip() + "\n" + "A2:" + self.retain_data[retain_idx]['answer']
+                    else:
+                        answer_first = "1." + self.idk[rand_pos].strip() + "\n"
+                        answer_last = "2." + self.retain_data[retain_idx]['answer']
+                elif "retain+forget" in data_type:    ##"retain+forget"
+                    # question = "1." + self.retain_data[retain_idx]['question'] + "\n" + "2." + self.forget_data[idx]['question']
+                    question = "Q1:" + self.retain_data[retain_idx]['question'] + " " + "Q2:" + self.forget_data[idx]['question']
+                    if "nomask" in data_type:
+                        answer_first = None
+                        # answer_last = "1." + self.retain_data[retain_idx]['answer'] + "\n" + "2." + self.idk[rand_pos].strip()
+                        answer_last = "A1:" + self.retain_data[retain_idx]['answer'] + "\n" + "A2:" + self.idk[rand_pos].strip()
+                    else:
+                        answer_first = "1." + self.retain_data[retain_idx]['answer'] + "\n"
+                        answer_last = "2." + self.idk[rand_pos].strip()
+                        
+            elif "retain" in data_type:
+                data = self.retain_data
+                question = data[retain_idx]['question']
+                answer = data[retain_idx]['answer']
+            else:
+                data = self.forget_data
+                question = data[idx]['question']
+                answer = data[idx]['answer']
+                # retain_question = self.retain_data[retain_idx]['question'] # v1
+                retain_question = self.retain_data[idx]['question']  # v2
+
+            
+            if "haha" in data_type:
+                answer = self.idk[rand_pos].strip()[:-1] + " that " + question[:-1] + "."
+
+            if "idk" in data_type:
+                answer = self.idk[rand_pos].strip()
+            elif "mismatch" in data_type:
+                answer = self.retain_data[retain_idx]['answer']
+
+            if "pre" in data_type:
+                if "forget" in data_type:#forget_idk_pre
+                    preflling_sentence = data[idx]['answer']+ " "
+                elif "idk" in data_type:#retain_idk_pre
+                    preflling_sentence = data[retain_idx]['answer']+ " "
+                else:#retain_pre
+                    preflling_sentence = self.idk[rand_pos].strip() + " "
+
+            if data_type == 'forget':
+                # only consider mask/unmask questions over the forget loss
+                converted_data = convert_raw_forget_data_to_model_format(self.tokenizer, self.max_length, question,
+                                                                         answer, self.model_configs, mask=self.mask)
+            elif "pre" in data_type:
+                converted_data = convert_raw_forget_data_to_model_format(self.tokenizer, self.max_length, question,
+                                                                         answer, self.model_configs, prefilling=preflling_sentence)
+            elif "+" in data_type:
+                converted_data = convert_raw_forget_data_to_model_format(self.tokenizer, self.max_length, question,
+                                                                      answer_last, self.model_configs,prefilling=answer_first)
+            else:
+                converted_data = convert_raw_forget_data_to_model_format(self.tokenizer, self.max_length, question,
+                                                                         answer, self.model_configs)
+            rets.append(converted_data)
+
+        return rets
+
+class TextForgetDatasetQA_test6(Dataset):
+    def __init__(self, tokenizer, model_family, forget_data, retain_data, max_length=512, mask=False):
+        super(TextForgetDatasetQA_test6, self).__init__()
+        self.tokenizer = tokenizer
+        self.max_length = max_length
+        self.forget_data = forget_data
+        self.retain_data = retain_data
+        self.mask = mask
+
+        self.model_configs = get_model_identifiers_from_yaml(model_family)
+
+        self.idontknowfile = "data/idontknow.jsonl"
+        with open(self.idontknowfile, "r") as f:
+            self.idk = f.readlines()
+
+        self.data_types = ["forget", "retain", "forget_idk", "retain_idk", "forget_mismatch", "forget_idk_pre", "retain_pre", "retain_idk_pre", "forget_haha", "forget+retain", "retain+forget","forget+retain_nomask","retain+forget_nomask","forget+retain_untargeted","retain+forget_untargeted","forget+retain_nomask_untargeted","retain+forget_nomask_untargeted"]
+
+    def __len__(self):
+        return len(self.forget_data)
+
+    def __getitem__(self, idx):
+        rets = []
+
+        torch.manual_seed(idx)
+        retain_idx = (idx + torch.randint(0, len(self.retain_data), (1,)).item()) % len(self.retain_data)
+        rand_pos = torch.randint(0, len(self.idk), (1,)).item()
+
+        for data_type in self.data_types:
+            if "+" in data_type:
+                if "forget+retain" in data_type:      ##"forget+retain"
+                    # question = "1." + self.forget_data[idx]['question'] + "\n" + "2." + self.retain_data[retain_idx]['question']
+                    question = "Q1:" + self.forget_data[idx]['question'] + "\n" + "Q2:" + self.retain_data[retain_idx]['question']
+                    if "nomask" in data_type:
+                        answer_first = None
+                        # answer_last = "1." + self.idk[rand_pos].strip() + "\n" + "2." + self.retain_data[retain_idx]['answer']
+                        answer_last = "A1:" + self.idk[rand_pos].strip() + "\n" + "A2:" + self.retain_data[retain_idx]['answer']
+                    else:
+                        answer_first = "1." + self.idk[rand_pos].strip() + "\n"
+                        answer_last = "2." + self.retain_data[retain_idx]['answer']
+                elif "retain+forget" in data_type:    ##"retain+forget"
+                    # question = "1." + self.retain_data[retain_idx]['question'] + "\n" + "2." + self.forget_data[idx]['question']
+                    question = "Q1:" + self.retain_data[retain_idx]['question'] + "\n" + "Q2:" + self.forget_data[idx]['question']
+                    if "nomask" in data_type:
+                        answer_first = None
+                        # answer_last = "1." + self.retain_data[retain_idx]['answer'] + "\n" + "2." + self.idk[rand_pos].strip()
+                        answer_last = "A1:" + self.retain_data[retain_idx]['answer'] + "\n" + "A2:" + self.idk[rand_pos].strip()
+                    else:
+                        answer_first = "1." + self.retain_data[retain_idx]['answer'] + "\n"
+                        answer_last = "2." + self.idk[rand_pos].strip()
+                        
+            elif "retain" in data_type:
+                data = self.retain_data
+                question = data[retain_idx]['question']
+                answer = data[retain_idx]['answer']
+            else:
+                data = self.forget_data
+                question = data[idx]['question']
+                answer = data[idx]['answer']
+                # retain_question = self.retain_data[retain_idx]['question'] # v1
+                retain_question = self.retain_data[idx]['question']  # v2
+
+            
+            if "haha" in data_type:
+                answer = self.idk[rand_pos].strip()[:-1] + " that " + question[:-1] + "."
+
+            if "idk" in data_type:
+                answer = self.idk[rand_pos].strip()
+            elif "mismatch" in data_type:
+                answer = self.retain_data[retain_idx]['answer']
+
+            if "pre" in data_type:
+                if "forget" in data_type:#forget_idk_pre
+                    preflling_sentence = data[idx]['answer']+ " "
+                elif "idk" in data_type:#retain_idk_pre
+                    preflling_sentence = data[retain_idx]['answer']+ " "
+                else:#retain_pre
+                    preflling_sentence = self.idk[rand_pos].strip() + " "
+
+            if data_type == 'forget':
+                # only consider mask/unmask questions over the forget loss
+                converted_data = convert_raw_forget_data_to_model_format(self.tokenizer, self.max_length, question,
+                                                                         answer, self.model_configs, mask=self.mask)
+            elif "pre" in data_type:
+                converted_data = convert_raw_forget_data_to_model_format(self.tokenizer, self.max_length, question,
+                                                                         answer, self.model_configs, prefilling=preflling_sentence)
+            elif "+" in data_type:
+                converted_data = convert_raw_forget_data_to_model_format(self.tokenizer, self.max_length, question,
+                                                                      answer_last, self.model_configs,prefilling=answer_first)
+            else:
+                converted_data = convert_raw_forget_data_to_model_format(self.tokenizer, self.max_length, question,
+                                                                         answer, self.model_configs)
+            rets.append(converted_data)
+
+        return rets
+
+class TextForgetDatasetQA_test7(Dataset):
+    def __init__(self, tokenizer, model_family, forget_data, retain_data, max_length=512, mask=False):
+        super(TextForgetDatasetQA_test7, self).__init__()
+        self.tokenizer = tokenizer
+        self.max_length = max_length
+        self.forget_data = forget_data
+        self.retain_data = retain_data
+        self.mask = mask
+
+        self.model_configs = get_model_identifiers_from_yaml(model_family)
+
+        self.idontknowfile = "data/idontknow.jsonl"
+        with open(self.idontknowfile, "r") as f:
+            self.idk = f.readlines()
+
+        self.data_types = ["forget", "retain", "forget_idk", "retain_idk", "forget_mismatch", "forget_idk_pre", "retain_pre", "retain_idk_pre", "forget_haha", "forget+retain", "retain+forget","forget+retain_nomask","retain+forget_nomask","forget+retain_untargeted","retain+forget_untargeted","forget+retain_nomask_untargeted","retain+forget_nomask_untargeted"]
+
+    def __len__(self):
+        return len(self.forget_data)
+
+    def __getitem__(self, idx):
+        rets = []
+
+        torch.manual_seed(idx)
+        retain_idx = (idx + torch.randint(0, len(self.retain_data), (1,)).item()) % len(self.retain_data)
+        rand_pos = torch.randint(0, len(self.idk), (1,)).item()
+
+        for data_type in self.data_types:
+            if "+" in data_type:
+                if "forget+retain" in data_type:      ##"forget+retain"
+                    question = "1." + self.forget_data[idx]['question'] + "\n" + "2." + self.retain_data[retain_idx]['question']
+                    # question = "Q1:" + self.forget_data[idx]['question'] + "\n" + "Q2:" + self.retain_data[retain_idx]['question']
+                    if "nomask" in data_type:
+                        answer_first = None
+                        answer_last = "1." + self.idk[rand_pos].strip() + "\n" + "2." + self.retain_data[retain_idx]['answer']
+                        # answer_last = "A1:" + self.idk[rand_pos].strip() + "\n" + "A2:" + self.retain_data[retain_idx]['answer']
+                    else:
+                        answer_first = "1." + self.idk[rand_pos].strip() + "\n"
+                        answer_last = "2." + self.retain_data[retain_idx]['answer']
+                elif "retain+forget" in data_type:    ##"retain+forget"
+                    question = "1." + self.retain_data[retain_idx]['question'] + "\n" + "2." + self.forget_data[idx]['question']
+                    # question = "Q1:" + self.retain_data[retain_idx]['question'] + "\n" + "Q2:" + self.forget_data[idx]['question']
+                    if "nomask" in data_type:
+                        answer_first = None
+                        answer_last = "1." + self.retain_data[retain_idx]['answer'] + "\n" + "2." + self.idk[rand_pos].strip()
+                        # answer_last = "A1:" + self.retain_data[retain_idx]['answer'] + "\n" + "A2:" + self.idk[rand_pos].strip()
+                    else:
+                        answer_first = "1." + self.retain_data[retain_idx]['answer'] + "\n"
+                        answer_last = "2." + self.idk[rand_pos].strip()
+                        
+            elif "retain" in data_type:
+                data = self.retain_data
+                question = data[retain_idx]['question']
+                answer = data[retain_idx]['answer']
+            else:
+                data = self.forget_data
+                question = data[idx]['question']
+                answer = data[idx]['answer']
+                # retain_question = self.retain_data[retain_idx]['question'] # v1
+                retain_question = self.retain_data[idx]['question']  # v2
+
+            
+            if "haha" in data_type:
+                answer = self.idk[rand_pos].strip()[:-1] + " that " + question[:-1] + "."
+
+            if "idk" in data_type:
+                answer = self.idk[rand_pos].strip()
+            elif "mismatch" in data_type:
+                answer = self.retain_data[retain_idx]['answer']
+
+            if "pre" in data_type:
+                if "forget" in data_type:#forget_idk_pre
+                    preflling_sentence = data[idx]['answer']+ " "
+                elif "idk" in data_type:#retain_idk_pre
+                    preflling_sentence = data[retain_idx]['answer']+ " "
+                else:#retain_pre
+                    preflling_sentence = self.idk[rand_pos].strip() + " "
+
+            if data_type == 'forget':
+                # only consider mask/unmask questions over the forget loss
+                converted_data = convert_raw_forget_data_to_model_format(self.tokenizer, self.max_length, question,
+                                                                         answer, self.model_configs, mask=self.mask)
+            elif "pre" in data_type:
+                converted_data = convert_raw_forget_data_to_model_format(self.tokenizer, self.max_length, question,
+                                                                         answer, self.model_configs, prefilling=preflling_sentence)
+            elif "+" in data_type:
+                converted_data = convert_raw_forget_data_to_model_format(self.tokenizer, self.max_length, question,
+                                                                      answer_last, self.model_configs,prefilling=answer_first)
+            else:
+                converted_data = convert_raw_forget_data_to_model_format(self.tokenizer, self.max_length, question,
+                                                                         answer, self.model_configs)
+            rets.append(converted_data)
+
+        return rets
