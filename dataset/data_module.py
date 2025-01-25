@@ -309,7 +309,7 @@ class TextForgetDatasetQA_test4(Dataset):
         for data_type in self.data_types:
             if "+" in data_type:
                 if "forget+retain" in data_type:      ##"forget+retain"
-                    question = "Q1." + self.forget_data[idx]['question'] + "\n" + "Q2. " + self.retain_data[retain_idx]['question']
+                    question = "1." + self.forget_data[idx]['question'] + "\n" + "2." + self.retain_data[retain_idx]['question']
                     # question = "Q1:" + self.forget_data[idx]['question'] + "\n" + "Q2:" + self.retain_data[retain_idx]['question']
                     if "nomask" in data_type:
                         answer_first = None
@@ -319,7 +319,7 @@ class TextForgetDatasetQA_test4(Dataset):
                         answer_first = "1." + self.idk[rand_pos].strip() + "\n"
                         answer_last = "2." + self.retain_data[retain_idx]['answer']
                 elif "retain+forget" in data_type:    ##"retain+forget"
-                    question = "Q1. " + self.retain_data[retain_idx]['question'] + "\n" + "Q2." + self.forget_data[idx]['question']
+                    question = "1." + self.retain_data[retain_idx]['question'] + "\n" + "2." + self.forget_data[idx]['question']
                     # question = "Q1:" + self.retain_data[retain_idx]['question'] + "\n" + "Q2:" + self.forget_data[idx]['question']
                     if "nomask" in data_type:
                         answer_first = None
