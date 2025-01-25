@@ -1,7 +1,7 @@
 MASTER_PORT=$((RANDOM % 50001 + 10000))
 ## Enter: unlearning할때 엔터만/ n_F: eval할때 and also/ F: eval할때 QA
 forget_losses=(
-    _DPO+GD
+    IDK+AP
     # DPO+KL
     # IDK+GD
     # IDK+KL
@@ -40,7 +40,7 @@ if [ "$use_LoRA" = true ]; then
 else
     save_root="results_WT3/tofu"
     #num_epochs=(1 2 3 4 5 6 7 8 9 10)
-    num_epochs=(5 1 2 3 4 10 9 8 7 6)
+    num_epochs=(5)
     NODE=2
     DEVICE1="0,1"
     DEVICE2=0
