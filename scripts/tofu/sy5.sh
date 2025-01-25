@@ -1,17 +1,17 @@
 MASTER_PORT=$((RANDOM % 50001 + 10000))
 ## Enter: unlearning할때 엔터만/ n_F: eval할때 and also/ F: eval할때 QA
 forget_losses=(
-    IDK+NM_JWJ0.2
-    IDK+NM_JWJ0.3
-    IDK+NM_JWJ0.1
-    DPO+NM_JWJ0.2
-    DPO+NM_JWJ0.3
-    DPO+NM_JWJ0.1
-    IDK+AP+NM_JWJ0.2
-    IDK+AP+NM_JWJ0.3
-    IDK+AP+NM_JWJ0.1
+    IDK+NM_JWJ
+    DPO+NM_JWJ
+    IDK+NM_JWJ0.8
+    DPO+NM_JWJ0.8
+    IDK+NM_JWJ1.2
+    DPO+NM_JWJ1.2
+    IDK+NM_JWJ0.9
+    DPO+NM_JWJ0.9
+    IDK+NM_JWJ1.1
+    DPO+NM_JWJ1.1
 )
-
 # You can specify any forget task from 1 to 10
 # the standard TOFU benchmark is task 1
 task_list=(1)
