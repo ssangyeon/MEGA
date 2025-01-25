@@ -1,0 +1,37 @@
+# ----------------------------------------------------------------------------
+# LLM Checkpoints (e.g., PyTorch, Hugging Face Transformers, TensorFlow, etc.)
+# ----------------------------------------------------------------------------
+
+# Common model/weight formats
+*.ckpt
+*.pth
+*.pt
+*.bin
+*.h5
+*.onnx
+*.pb
+*.tflite
+*.pkl
+*.safetensors
+
+# Common checkpoint folder names (modify to match your project structure)
+checkpoint/
+checkpoints/
+checkpoint-*/
+
+# If you keep logs in a standard directory (e.g., training logs)
+logs/
+lightning_logs/
+
+# Example Hugging Face Transformers checkpoints
+# (These can create folders like 'checkpoint-10000', 'checkpoint-20000', etc.)
+checkpoint-*/
+
+# ----------------------------------------------------------------------------
+# Other large or generated files
+# ----------------------------------------------------------------------------
+# Add or remove rules for any additional large or auto-generated files
+# For instance, if you have any model artifacts in /models
+models/
+
+# ----------------------------------------------------------------------------csv.py

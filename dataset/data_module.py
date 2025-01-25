@@ -21,14 +21,15 @@ def dataset_to_json(dataset, filename, ):
 
 
 # adopt from TOFU: https://github.com/locuslab/tofu/blob/80159d8ea39edf147fb09cd82aefa08e506e6718/data_module.py#L8
-def convert_raw_forget_data_to_model_format(tokenizer, max_length, question, answer, model_configs, mask=True):
+def convert_raw_forget_data_to_model_format(tokenizer, max_length, question, answer, model_configs, mask=True, prefilling=None):
     question_start_token, question_end_token, answer_token = model_configs[
         'question_start_tag'], model_configs['question_end_tag'], model_configs['answer_tag']
-
-    new_question = question_start_token + question + question_end_token
+    if prefilling is not None:
+        new_question = question_start_token + question + question_end_token + prefilling
+    else:
+        new_question = question_start_token + question + question_end_token
     new_answer = answer_token + answer
     full_text = new_question + new_answer
-
     num_question_tokens = len(tokenizer.tokenize(new_question, add_special_tokens=True))
 
     encoded = tokenizer(
@@ -50,7 +51,7 @@ def convert_raw_forget_data_to_model_format(tokenizer, max_length, question, ans
         for i in range(num_question_tokens): label[i] = -100
     else:
         label = pad_input_ids
-
+        # print("full_text:",full_text+"\n","pad_input_ids:",pad_input_ids,"\n","label:",label,"\n","pad_attention_mask:",pad_attention_mask)
     return torch.tensor(pad_input_ids), torch.tensor(label), torch.tensor(pad_attention_mask)
 
 
@@ -68,6 +69,7 @@ def convert_raw_data_to_model_format(tokenizer, max_length, question, answer, mo
         max_length=max_length,
         truncation=True,
     )
+    # print(tokenizer.special_tokens_map)
     pad_length = max_length - len(encoded.input_ids)
     pad_input_ids = encoded['input_ids'] + [tokenizer.eos_token_id] * pad_length
     pad_attention_mask = encoded['attention_mask'] + [0] * pad_length
@@ -97,7 +99,7 @@ class TextForgetDatasetQA(Dataset):
         with open(self.idontknowfile, "r") as f:
             self.idk = f.readlines()
 
-        self.data_types = ["forget", "retain", "forget_idk", "retain_idk", "forget_mismatch"]
+        self.data_types = ["forget", "retain", "forget_idk", "retain_idk", "forget_mismatch", "forget_idk_pre", "retain_pre", "retain_idk_pre", "forget_haha", "forget+retain", "retain+forget","forget+retain_nomask","retain+forget_nomask","forget+retain_untargeted","retain+forget_untargeted","forget+retain_nomask_untargeted","retain+forget_nomask_untargeted"]
 
     def __len__(self):
         return len(self.forget_data)
@@ -110,8 +112,41 @@ class TextForgetDatasetQA(Dataset):
         rand_pos = torch.randint(0, len(self.idk), (1,)).item()
 
         for data_type in self.data_types:
-
-            if "retain" in data_type:
+            if "+" in data_type:
+                if "forget+retain" in data_type:      ##"forget+retain"
+                    # question = "1." + self.forget_data[idx]['question'] + "\n" + "2." + self.retain_data[retain_idx]['question']
+                    question = "Q1:" + self.forget_data[idx]['question'] + "\n" + "Q2:" + self.retain_data[retain_idx]['question']
+                    if "nomask_untargeted" in data_type:
+                        answer_first = None
+                        answer_last = "1." + self.forget_data[idx]['answer'] + "\n" + "2." + self.retain_data[retain_idx]['answer']
+                    elif "nomask" in data_type:
+                        answer_first = None
+                        # answer_last = "1." + self.idk[rand_pos].strip() + "\n" + "2." + self.retain_data[retain_idx]['answer']
+                        answer_last = "A1:" + self.idk[rand_pos].strip() + "\n" + "A2:" + self.retain_data[retain_idx]['answer']
+                    elif "untargeted" in data_type:
+                        answer_first = "1." + self.forget_data[idx]['answer'] + "\n"
+                        answer_last = "2." + self.retain_data[retain_idx]['answer']
+                    else:
+                        answer_first = "1." + self.idk[rand_pos].strip() + "\n"
+                        answer_last = "2." + self.retain_data[retain_idx]['answer']
+                elif "retain+forget" in data_type:    ##"retain+forget"
+                    # question = "1." + self.retain_data[retain_idx]['question'] + "\n" + "2." + self.forget_data[idx]['question']
+                    question = "Q1:" + self.retain_data[retain_idx]['question'] + "\n" + "Q2:" + self.forget_data[idx]['question']
+                    if "nomask_untargeted" in data_type:
+                        answer_first = None
+                        answer_last = "1." + self.retain_data[retain_idx]['answer'] + "\n" + "2." + self.forget_data[idx]['answer']
+                    elif "nomask" in data_type:
+                        answer_first = None
+                        # answer_last = "1." + self.retain_data[retain_idx]['answer'] + "\n" + "2." + self.idk[rand_pos].strip()
+                        answer_last = "A1:" + self.retain_data[retain_idx]['answer'] + "\n" + "A2:" + self.idk[rand_pos].strip()
+                    elif "untargeted" in data_type:
+                        answer_first = "1." + self.retain_data[retain_idx]['answer'] + "\n"
+                        answer_last = "2." + self.forget_data[idx]['answer']
+                    else:
+                        answer_first = "1." + self.retain_data[retain_idx]['answer'] + "\n"
+                        answer_last = "2." + self.idk[rand_pos].strip()
+                        
+            elif "retain" in data_type:
                 data = self.retain_data
                 question = data[retain_idx]['question']
                 answer = data[retain_idx]['answer']
@@ -122,15 +157,33 @@ class TextForgetDatasetQA(Dataset):
                 # retain_question = self.retain_data[retain_idx]['question'] # v1
                 retain_question = self.retain_data[idx]['question']  # v2
 
+            
+            if "haha" in data_type:
+                answer = self.idk[rand_pos].strip()[:-1] + " that " + question[:-1] + "."
+
             if "idk" in data_type:
                 answer = self.idk[rand_pos].strip()
             elif "mismatch" in data_type:
                 answer = self.retain_data[retain_idx]['answer']
 
+            if "pre" in data_type:
+                if "forget" in data_type:#forget_idk_pre
+                    preflling_sentence = data[idx]['answer']+ " "
+                elif "idk" in data_type:#retain_idk_pre
+                    preflling_sentence = data[retain_idx]['answer']+ " "
+                else:#retain_pre
+                    preflling_sentence = self.idk[rand_pos].strip() + " "
+
             if data_type == 'forget':
                 # only consider mask/unmask questions over the forget loss
                 converted_data = convert_raw_forget_data_to_model_format(self.tokenizer, self.max_length, question,
                                                                          answer, self.model_configs, mask=self.mask)
+            elif "pre" in data_type:
+                converted_data = convert_raw_forget_data_to_model_format(self.tokenizer, self.max_length, question,
+                                                                         answer, self.model_configs, prefilling=preflling_sentence)
+            elif "+" in data_type:
+                converted_data = convert_raw_forget_data_to_model_format(self.tokenizer, self.max_length, question,
+                                                                      answer_last, self.model_configs,prefilling=answer_first)
             else:
                 converted_data = convert_raw_forget_data_to_model_format(self.tokenizer, self.max_length, question,
                                                                          answer, self.model_configs)
@@ -198,7 +251,8 @@ def custom_data_collator_forget(samples):
     rets = []
 
     # Extracting samples for each data type
-    data_types = ["forget", "retain", "forget_idk", "retain_idk", "forget_mismatch"]
+    data_types = ["forget", "retain", "forget_idk", "retain_idk", "forget_mismatch", "forget_idk_pre", "retain_pre", "retain_idk_pre", "forget_haha", "forget+retain", "retain+forget","forget+retain_nomask","retain+forget_nomask","forget+retain_untargeted","retain+forget_untargeted","forget+retain_nomask_untargeted","retain+forget_nomask_untargeted"]
+
     samples_dict = {data_type: [sample[i] for sample in samples] for i, data_type in enumerate(data_types)}
 
     for data_type in data_types:
