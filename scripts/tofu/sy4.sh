@@ -1,7 +1,7 @@
 MASTER_PORT=$((RANDOM % 50001 + 10000))
 ## Enter: unlearning할때 엔터만/ n_F: eval할때 and also/ F: eval할때 QA
 forget_losses=(
-    _IDK+AP+NM_JWJ
+    __IDK+AP+NM_JWJ
 )
 
 # You can specify any forget task from 1 to 10
