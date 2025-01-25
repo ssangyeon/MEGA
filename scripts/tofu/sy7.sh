@@ -1,8 +1,7 @@
 MASTER_PORT=$((RANDOM % 50001 + 10000))
 ## Enter: unlearning할때 엔터만/ n_F: eval할때 and also/ F: eval할때 QA
 forget_losses=(
-    IDK+NM_JWJ1.5
-    IDK+NM_JWJ0.5
+    IDK+KL+NM_JWJ0.2
 )
 # You can specify any forget task from 1 to 10
 # the standard TOFU benchmark is task 1
@@ -64,14 +63,14 @@ for num_epoch in ${num_epochs[@]}; do
                                 $COMMON
                     done
                 done
-                # CUDA_VISIBLE_DEVICES=$DEVICE2 python3 \
-                # eval_mixed_TEST7.py \
-                # --lr $lr \
-                # --forget $split \
-                # --method $forget_loss \
-                # --batch_size 2 \
-                # --epochs $num_epochs \
-                # $([ "$use_LoRA" = "true" ] && echo --use_LoRA)
+                CUDA_VISIBLE_DEVICES=$DEVICE2 python3 \
+                eval_mixed_TEST7.py \
+                --lr $lr \
+                --forget $split \
+                --method $forget_loss \
+                --batch_size 2 \
+                --epochs $num_epochs \
+                $([ "$use_LoRA" = "true" ] && echo --use_LoRA)
             done
         done
     done
