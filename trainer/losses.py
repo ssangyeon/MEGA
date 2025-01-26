@@ -2,6 +2,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 import re
+from transformers import AutoTokenizer
 
 def get_loss(model, ref_model, inputs, loss_type, beta=0.1):
     # forget_loss
@@ -672,32 +673,3 @@ def get_me_loss(logits, labels):
     loss = masked_kl_div.sum() / loss_mask.sum()
 
     return loss
-
-# def get_me_loss_NM(logits, labels,special_ranges=None): ##special_ranges=[(10,19),(35,50)]
-#     num_labels = logits.shape[-1]
-
-#     assert logits.shape[:-1] == labels.shape, "Logits and labels must have compatible shapes."
-
-#     # Adjust logits and labels to exclude the last token
-#     labels = labels[:, 1:].clone()  # (bs, seq_len - 1)
-#     logits = logits[:, :-1, :]  # (bs, seq_len - 1, vocab_size)
-
-#     soft_outputs = F.softmax(logits, dim=-1).view(-1, num_labels)  # (bs*seq_len, vocab_size)
-#     uniform_dist = torch.full_like(soft_outputs, 1.0 / num_labels).to(logits.device)  # (bs*seq_len, vocab_size)
-
-#     if special_ranges:
-#         for start, end in special_ranges:
-#             uniform_dist[:, start:end + 1] = 1.0  # 특정 범위의 확률값을 1로 설정
-#         # 정규화 (행별 합계가 1이 되도록)
-#         uniform_dist = uniform_dist / uniform_dist.sum(dim=-1, keepdim=True)
-
-
-
-#     loss_mask = (labels != -100).view(-1)  # (bs*(seq_len - 1))
-
-#     kl_div = F.kl_div((soft_outputs + 1e-12).log(), uniform_dist, reduction='none').sum(-1)  # (bs*(seq_len - 1))
-
-#     masked_kl_div = kl_div * loss_mask  # (bs*(seq_len - 1))
-#     loss = masked_kl_div.sum() / loss_mask.sum()
-
-#     return loss
