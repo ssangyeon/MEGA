@@ -100,7 +100,7 @@ class TextForgetDatasetQA(Dataset):
             self.idk = f.readlines()
 
         self.data_types = ["forget", "retain", "forget_idk", "retain_idk", "forget_mismatch", "forget_idk_pre", "retain_pre", "retain_idk_pre", "forget_haha", "forget+retain", "retain+forget","forget+retain_nomask","retain+forget_nomask","forget+retain_untargeted","retain+forget_untargeted","forget+retain_nomask_untargeted","retain+forget_nomask_untargeted"]
-
+        
     def __len__(self):
         return len(self.forget_data)
 
@@ -114,34 +114,34 @@ class TextForgetDatasetQA(Dataset):
         for data_type in self.data_types:
             if "+" in data_type:
                 if "forget+retain" in data_type:      ##"forget+retain"
-                    # question = "1." + self.forget_data[idx]['question'] + "\n" + "2." + self.retain_data[retain_idx]['question']
-                    question = "Q1:" + self.forget_data[idx]['question'] + "\n" + "Q2:" + self.retain_data[retain_idx]['question']
+                    question = "1." + self.forget_data[idx]['question'] + "\n" + "2. " + self.retain_data[retain_idx]['question']
+                    # question = "Q1:" + self.forget_data[idx]['question'] + "\n" + "Q2: " + self.retain_data[retain_idx]['question']
                     if "nomask_untargeted" in data_type:
                         answer_first = None
-                        answer_last = "1." + self.forget_data[idx]['answer'] + "\n" + "2." + self.retain_data[retain_idx]['answer']
+                        answer_last = "1." + self.forget_data[idx]['answer'] + "\n" + "2. " + self.retain_data[retain_idx]['answer']
+                        # print(f"data tpye:{data_type}")
+                        # print(f"question: {question}")
+                        # print(f"answer_last: {answer_last}")
                     elif "nomask" in data_type:
                         answer_first = None
-                        # answer_last = "1." + self.idk[rand_pos].strip() + "\n" + "2." + self.retain_data[retain_idx]['answer']
-                        answer_last = "A1:" + self.idk[rand_pos].strip() + "\n" + "A2:" + self.retain_data[retain_idx]['answer']
-                    elif "untargeted" in data_type:
-                        answer_first = "1." + self.forget_data[idx]['answer'] + "\n"
-                        answer_last = "2." + self.retain_data[retain_idx]['answer']
+                        answer_last = "1." + self.idk[rand_pos].strip() + "\n" + "2. " + self.retain_data[retain_idx]['answer']
+                        # answer_last = "A1: " + self.idk[rand_pos].strip() + "\n" + "A2: " + self.retain_data[retain_idx]['answer']
                     else:
                         answer_first = "1." + self.idk[rand_pos].strip() + "\n"
                         answer_last = "2." + self.retain_data[retain_idx]['answer']
                 elif "retain+forget" in data_type:    ##"retain+forget"
-                    # question = "1." + self.retain_data[retain_idx]['question'] + "\n" + "2." + self.forget_data[idx]['question']
-                    question = "Q1:" + self.retain_data[retain_idx]['question'] + "\n" + "Q2:" + self.forget_data[idx]['question']
+                    question = "1. " + self.retain_data[retain_idx]['question'] + "\n" + "2." + self.forget_data[idx]['question']
+                    # question = "Q1: " + self.retain_data[retain_idx]['question'] + "\n" + "Q2:" + self.forget_data[idx]['question']
                     if "nomask_untargeted" in data_type:
                         answer_first = None
-                        answer_last = "1." + self.retain_data[retain_idx]['answer'] + "\n" + "2." + self.forget_data[idx]['answer']
+                        answer_last = "1. " + self.retain_data[retain_idx]['answer'] + "\n" + "2." + self.forget_data[idx]['answer']
+                        # print(f"data tpye:{data_type}")
+                        # print(f"question: {question}")
+                        # print(f"answer_last: {answer_last}")
                     elif "nomask" in data_type:
                         answer_first = None
-                        # answer_last = "1." + self.retain_data[retain_idx]['answer'] + "\n" + "2." + self.idk[rand_pos].strip()
-                        answer_last = "A1:" + self.retain_data[retain_idx]['answer'] + "\n" + "A2:" + self.idk[rand_pos].strip()
-                    elif "untargeted" in data_type:
-                        answer_first = "1." + self.retain_data[retain_idx]['answer'] + "\n"
-                        answer_last = "2." + self.forget_data[idx]['answer']
+                        answer_last = "1. " + self.retain_data[retain_idx]['answer'] + " " + "2." + self.idk[rand_pos].strip()
+                        # answer_last = "A1: " + self.retain_data[retain_idx]['answer'] + "\n" + "A2: " + self.idk[rand_pos].strip()
                     else:
                         answer_first = "1." + self.retain_data[retain_idx]['answer'] + "\n"
                         answer_last = "2." + self.idk[rand_pos].strip()
@@ -173,11 +173,14 @@ class TextForgetDatasetQA(Dataset):
                     preflling_sentence = data[retain_idx]['answer']+ " "
                 else:#retain_pre
                     preflling_sentence = self.idk[rand_pos].strip() + " "
-
+            
             if data_type == 'forget':
                 # only consider mask/unmask questions over the forget loss
                 converted_data = convert_raw_forget_data_to_model_format(self.tokenizer, self.max_length, question,
                                                                          answer, self.model_configs, mask=self.mask)
+            elif "nomask_untargeted" in data_type:
+                convert_raw_forget_data_to_model_format(self.tokenizer, self.max_length, question,
+                                                                      answer_last, self.model_configs, mask=False)      ##MK,MG                                                       
             elif "pre" in data_type:
                 converted_data = convert_raw_forget_data_to_model_format(self.tokenizer, self.max_length, question,
                                                                          answer, self.model_configs, prefilling=preflling_sentence)
@@ -188,8 +191,8 @@ class TextForgetDatasetQA(Dataset):
                 converted_data = convert_raw_forget_data_to_model_format(self.tokenizer, self.max_length, question,
                                                                          answer, self.model_configs)
             rets.append(converted_data)
-
         return rets
+
 
 
 class TextDatasetQA(Dataset):
@@ -251,7 +254,8 @@ def custom_data_collator_forget(samples):
     rets = []
 
     # Extracting samples for each data type
-    data_types = ["forget", "retain", "forget_idk", "retain_idk", "forget_mismatch", "forget_idk_pre", "retain_pre", "retain_idk_pre", "forget_haha", "forget+retain", "retain+forget","forget+retain_nomask","retain+forget_nomask","forget+retain_untargeted","retain+forget_untargeted","forget+retain_nomask_untargeted","retain+forget_nomask_untargeted"]
+    # data_types = ["forget", "retain", "forget_idk", "retain_idk", "forget_mismatch", "forget_idk_pre", "retain_pre", "retain_idk_pre", "forget_haha", "forget+retain", "retain+forget","forget+retain_nomask","retain+forget_nomask","forget+retain_untargeted","retain+forget_untargeted","forget+retain_nomask_untargeted","retain+forget_nomask_untargeted","forget+retain_nomask_kl","retain+forget_nomask_kl"]
+    data_types = ["forget", "retain", "forget_idk", "retain_idk", "forget_mismatch", "forget_idk_pre", "retain_pre", "retain_idk_pre", "forget_haha", "forget+retain", "retain+forget","forget+retain_nomask","retain+forget_nomask","forget+retain_untargeted","retain+forget_untargeted","forget+retain_nomask_untargeted","retain+forget_nomask_untargeted","forget+retain_nomask_kl","retain+forget_nomask_kl","forget+retain_gaf","forget+retain_gdr","retain+forget_gaf","retain+forget_gdr"]
 
     samples_dict = {data_type: [sample[i] for sample in samples] for i, data_type in enumerate(data_types)}
 
@@ -579,7 +583,7 @@ class TextForgetDatasetQA_test7(Dataset):
         with open(self.idontknowfile, "r") as f:
             self.idk = f.readlines()
 
-        self.data_types = ["forget", "retain", "forget_idk", "retain_idk", "forget_mismatch", "forget_idk_pre", "retain_pre", "retain_idk_pre", "forget_haha", "forget+retain", "retain+forget","forget+retain_nomask","retain+forget_nomask","forget+retain_untargeted","retain+forget_untargeted","forget+retain_nomask_untargeted","retain+forget_nomask_untargeted"]
+        self.data_types = ["forget", "retain", "forget_idk", "retain_idk", "forget_mismatch", "forget_idk_pre", "retain_pre", "retain_idk_pre", "forget_haha", "forget+retain", "retain+forget","forget+retain_nomask","retain+forget_nomask","forget+retain_untargeted","retain+forget_untargeted","forget+retain_nomask_untargeted","retain+forget_nomask_untargeted","forget+retain_nomask_kl","retain+forget_nomask_kl","forget+retain_gaf","forget+retain_gdr","retain+forget_gaf","retain+forget_gdr"]
 
     def __len__(self):
         return len(self.forget_data)
@@ -596,22 +600,46 @@ class TextForgetDatasetQA_test7(Dataset):
                 if "forget+retain" in data_type:      ##"forget+retain"
                     question = "1." + self.forget_data[idx]['question'] + "\n" + "2. " + self.retain_data[retain_idx]['question']
                     # question = "Q1:" + self.forget_data[idx]['question'] + "\n" + "Q2: " + self.retain_data[retain_idx]['question']
-                    if "nomask" in data_type:
+                    if "nomask_untargeted" in data_type:
+                        answer_first = None
+                        answer_last = "1." + self.forget_data[idx]['answer'] + "\n" + "2. " + self.retain_data[retain_idx]['answer']
+                        # print(f"data tpye:{data_type}")
+                        # print(f"question: {question}")
+                        # print(f"answer_last: {answer_last}")
+                    elif "nomask" in data_type:
                         answer_first = None
                         answer_last = "1." + self.idk[rand_pos].strip() + "\n" + "2. " + self.retain_data[retain_idx]['answer']
                         # answer_last = "A1: " + self.idk[rand_pos].strip() + "\n" + "A2: " + self.retain_data[retain_idx]['answer']
+                    elif "gaf" in data_type:
+                        answer_first = "1."
+                        answer_last = self.forget_data[idx]['answer']
+                    elif "gdr" in data_type:
+                        answer_first = "1." + self.forget_data[idx]['answer']
+                        answer_last = "\n" + "2. " + self.retain_data[retain_idx]['answer']
                     else:
                         answer_first = "1." + self.idk[rand_pos].strip() + "\n"
-                        answer_last = "2." + self.retain_data[retain_idx]['answer']
+                        answer_last = "2. " + self.retain_data[retain_idx]['answer']
                 elif "retain+forget" in data_type:    ##"retain+forget"
                     question = "1. " + self.retain_data[retain_idx]['question'] + "\n" + "2." + self.forget_data[idx]['question']
                     # question = "Q1: " + self.retain_data[retain_idx]['question'] + "\n" + "Q2:" + self.forget_data[idx]['question']
-                    if "nomask" in data_type:
+                    if "nomask_untargeted" in data_type:
                         answer_first = None
-                        answer_last = "1. " + self.retain_data[retain_idx]['answer'] + " " + "2." + self.idk[rand_pos].strip()
+                        answer_last = "1. " + self.retain_data[retain_idx]['answer'] + "\n" + "2." + self.forget_data[idx]['answer']
+                        # print(f"data tpye:{data_type}")
+                        # print(f"question: {question}")
+                        # print(f"answer_last: {answer_last}")
+                    elif "nomask" in data_type:
+                        answer_first = None
+                        answer_last = "1. " + self.retain_data[retain_idx]['answer'] + "\n" + "2." + self.idk[rand_pos].strip()
                         # answer_last = "A1: " + self.retain_data[retain_idx]['answer'] + "\n" + "A2: " + self.idk[rand_pos].strip()
+                    elif "gaf" in data_type:
+                        answer_first =  "1. " + self.retain_data[retain_idx]['answer'] + "\n" + "2."
+                        answer_last = self.forget_data[idx]['answer']
+                    elif "gdr" in data_type:
+                        answer_first = None
+                        answer_last =  "1. " + self.retain_data[retain_idx]['answer'] + "\n" + "2."
                     else:
-                        answer_first = "1." + self.retain_data[retain_idx]['answer'] + "\n"
+                        answer_first = "1. " + self.retain_data[retain_idx]['answer'] + "\n"
                         answer_last = "2." + self.idk[rand_pos].strip()
                         
             elif "retain" in data_type:
@@ -641,11 +669,15 @@ class TextForgetDatasetQA_test7(Dataset):
                     preflling_sentence = data[retain_idx]['answer']+ " "
                 else:#retain_pre
                     preflling_sentence = self.idk[rand_pos].strip() + " "
-
+            
             if data_type == 'forget':
                 # only consider mask/unmask questions over the forget loss
                 converted_data = convert_raw_forget_data_to_model_format(self.tokenizer, self.max_length, question,
                                                                          answer, self.model_configs, mask=self.mask)
+            # elif "nomask_untargeted" in data_type or "no_mask_kl" in data_type:
+            elif "nomask_untargeted" in data_type:
+                converted_data = convert_raw_forget_data_to_model_format(self.tokenizer, self.max_length, question,
+                                                                      answer_last, self.model_configs, mask=False)      ##MK,MG                                       
             elif "pre" in data_type:
                 converted_data = convert_raw_forget_data_to_model_format(self.tokenizer, self.max_length, question,
                                                                          answer, self.model_configs, prefilling=preflling_sentence)
@@ -656,5 +688,4 @@ class TextForgetDatasetQA_test7(Dataset):
                 converted_data = convert_raw_forget_data_to_model_format(self.tokenizer, self.max_length, question,
                                                                          answer, self.model_configs)
             rets.append(converted_data)
-
         return rets

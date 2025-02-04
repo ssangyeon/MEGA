@@ -12,7 +12,8 @@ task_list=(1)
 export TASK_LIST=$(IFS=,; echo "${task_list[*]}")
 
 learning_rates=(
-    1e-5
+    # 1e-5
+    2e-5
 )
 use_LoRA=false
 
@@ -25,8 +26,8 @@ if [ "$use_LoRA" = true ]; then
     DEVICE2=2
 else
     save_root="results_WT_TEST7/tofu"
-    #num_epochs=(1 2 3 4 5 6 7 8 9 10)
-    num_epochs=(1 2 3 4 6 7 8 9 10)
+    # num_epochs=(2 3 4)
+    num_epochs=(5)
     NODE=2
     DEVICE1="0,1"
     DEVICE2=0
@@ -40,8 +41,8 @@ save_steps=last
 eval_steps=(last)
 
 
-splits=(forget01 forget05 forget10) # 모든 split 설정
-# splits=(forget01) 
+# splits=(forget01 forget05 forget10) # 모든 split 설정
+splits=(forget05) 
 for num_epoch in ${num_epochs[@]}; do
     for split in ${splits[@]}; do
         for forget_loss in ${forget_losses[@]}; do

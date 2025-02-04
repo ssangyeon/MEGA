@@ -1,0 +1,1552 @@
+{
+    "avg_gt_loss": [
+        3.6292107105255127,
+        4.355250358581543,
+        3.409959316253662,
+        12.6566743850708,
+        15.59827709197998,
+        12.602180480957031,
+        11.23635482788086,
+        21.352176666259766,
+        13.646040916442871,
+        14.733634948730469,
+        14.29433536529541,
+        26.486597061157227,
+        17.12734603881836,
+        13.190206527709961,
+        13.976327896118164,
+        18.14561653137207,
+        19.144912719726562,
+        13.994515419006348,
+        15.199830055236816,
+        15.074067115783691,
+        15.26760482788086,
+        22.674577713012695,
+        26.433059692382812,
+        21.572647094726562,
+        17.560474395751953,
+        22.037202835083008,
+        15.998588562011719,
+        19.694080352783203,
+        21.44872283935547,
+        15.755739212036133,
+        15.274529457092285,
+        25.045949935913086,
+        21.561420440673828,
+        26.473081588745117,
+        21.44140625,
+        23.0779972076416,
+        15.665507316589355,
+        23.794490814208984,
+        23.193214416503906,
+        21.493621826171875
+    ],
+    "gt_loss": [
+        170.57290649414062,
+        74.03925323486328,
+        85.24898529052734,
+        354.3868713378906,
+        405.5552062988281,
+        415.8719482421875,
+        348.3269958496094,
+        1110.313232421875,
+        1118.975341796875,
+        707.2144775390625,
+        500.3017272949219,
+        1297.84326171875,
+        890.6219482421875,
+        844.1732177734375,
+        698.81640625,
+        1215.75634765625,
+        1186.984619140625,
+        727.7147827148438,
+        927.1896362304688,
+        874.2958984375,
+        564.9013671875,
+        1088.3797607421875,
+        1295.219970703125,
+        819.7606201171875,
+        614.6165771484375,
+        749.264892578125,
+        655.942138671875,
+        1024.0921630859375,
+        943.7437744140625,
+        866.565673828125,
+        794.2755126953125,
+        1051.929931640625,
+        1099.6324462890625,
+        1297.1810302734375,
+        1029.1875,
+        1315.44580078125,
+        861.6029052734375,
+        927.9851684570312,
+        974.114990234375,
+        1225.136474609375
+    ],
+    "num_token_gt": [
+        47.0,
+        17.0,
+        25.0,
+        28.0,
+        26.0,
+        33.0,
+        31.0,
+        52.0,
+        82.0,
+        48.0,
+        35.0,
+        49.0,
+        52.0,
+        64.0,
+        50.0,
+        67.0,
+        62.0,
+        52.0,
+        61.0,
+        58.0,
+        37.0,
+        48.0,
+        49.0,
+        38.0,
+        35.0,
+        34.0,
+        41.0,
+        52.0,
+        44.0,
+        55.0,
+        52.0,
+        42.0,
+        51.0,
+        49.0,
+        48.0,
+        57.0,
+        55.0,
+        39.0,
+        42.0,
+        57.0
+    ],
+    "rouge1_recall": [
+        0.30434782608695654,
+        0.8571428571428571,
+        0.7,
+        0.0625,
+        0.4,
+        0.5882352941176471,
+        0.3125,
+        0.07142857142857142,
+        0.10909090909090909,
+        0.2,
+        0.0,
+        0.13333333333333333,
+        0.3333333333333333,
+        0.34210526315789475,
+        0.25806451612903225,
+        0.020833333333333332,
+        0.0975609756097561,
+        0.21428571428571427,
+        0.05714285714285714,
+        0.07692307692307693,
+        0.5652173913043478,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.045454545454545456,
+        0.0,
+        0.0,
+        0.03571428571428571,
+        0.06060606060606061,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.041666666666666664,
+        0.03225806451612903,
+        0.02857142857142857
+    ],
+    "rougeL_recall": [
+        0.21739130434782608,
+        0.8571428571428571,
+        0.6,
+        0.0625,
+        0.3333333333333333,
+        0.47058823529411764,
+        0.25,
+        0.07142857142857142,
+        0.07272727272727272,
+        0.16666666666666666,
+        0.0,
+        0.1,
+        0.16666666666666666,
+        0.2631578947368421,
+        0.16129032258064516,
+        0.020833333333333332,
+        0.04878048780487805,
+        0.14285714285714285,
+        0.05714285714285714,
+        0.07692307692307693,
+        0.4782608695652174,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.045454545454545456,
+        0.0,
+        0.0,
+        0.03571428571428571,
+        0.06060606060606061,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.041666666666666664,
+        0.03225806451612903,
+        0.02857142857142857
+    ],
+    "average_perturb_loss": [
+        [
+            4.168493747711182,
+            4.201818466186523,
+            4.290890216827393,
+            4.404890060424805,
+            4.359584331512451
+        ],
+        [
+            6.307623386383057,
+            6.171669960021973,
+            6.536459445953369,
+            6.613902568817139,
+            6.13503885269165
+        ],
+        [
+            10.043166160583496,
+            9.074853897094727,
+            9.359697341918945,
+            8.734602928161621,
+            8.215353965759277
+        ],
+        [
+            9.150050163269043,
+            9.322148323059082,
+            9.179780960083008,
+            9.230972290039062,
+            9.007976531982422
+        ],
+        [
+            11.747529029846191,
+            12.220911979675293,
+            12.069661140441895,
+            12.65537166595459,
+            11.642791748046875
+        ],
+        [
+            7.068205833435059,
+            8.17092227935791,
+            8.139369010925293,
+            8.237717628479004,
+            9.155359268188477
+        ],
+        [
+            10.39900016784668,
+            8.648008346557617,
+            8.042487144470215,
+            11.20413875579834,
+            9.555754661560059
+        ],
+        [
+            10.843902587890625,
+            11.604991912841797,
+            9.69171142578125,
+            11.298492431640625,
+            10.214920043945312
+        ],
+        [
+            9.471561431884766,
+            7.7951812744140625,
+            10.879215240478516,
+            9.40496826171875,
+            9.405839920043945
+        ],
+        [
+            12.12942123413086,
+            12.760544776916504,
+            11.363265991210938,
+            13.697358131408691,
+            13.231392860412598
+        ],
+        [
+            8.962322235107422,
+            9.0291109085083,
+            9.121246337890625,
+            9.097383499145508,
+            8.823626518249512
+        ],
+        [
+            15.34043025970459,
+            11.533831596374512,
+            13.631099700927734,
+            14.999358177185059,
+            13.934391021728516
+        ],
+        [
+            9.897714614868164,
+            11.408256530761719,
+            11.104629516601562,
+            10.604037284851074,
+            11.626578330993652
+        ],
+        [
+            11.761113166809082,
+            11.847098350524902,
+            11.800402641296387,
+            11.974157333374023,
+            11.931561470031738
+        ],
+        [
+            12.929868698120117,
+            13.575275421142578,
+            11.534941673278809,
+            9.641790390014648,
+            10.880159378051758
+        ],
+        [
+            11.949286460876465,
+            12.717592239379883,
+            11.71640682220459,
+            10.842512130737305,
+            10.020434379577637
+        ],
+        [
+            14.832930564880371,
+            13.778990745544434,
+            13.309733390808105,
+            12.562667846679688,
+            14.420269966125488
+        ],
+        [
+            10.814779281616211,
+            11.326850891113281,
+            8.994400024414062,
+            9.988000869750977,
+            11.19615364074707
+        ],
+        [
+            12.88942813873291,
+            13.381152153015137,
+            12.712325096130371,
+            11.866680145263672,
+            13.048480987548828
+        ],
+        [
+            13.16443157196045,
+            12.321651458740234,
+            12.96484661102295,
+            12.871841430664062,
+            13.222235679626465
+        ],
+        [
+            5.546998023986816,
+            5.415899276733398,
+            5.785085678100586,
+            5.422831058502197,
+            4.756927013397217
+        ],
+        [
+            19.876373291015625,
+            21.975618362426758,
+            21.68238639831543,
+            23.792123794555664,
+            24.123258590698242
+        ],
+        [
+            19.27944564819336,
+            21.584278106689453,
+            21.595556259155273,
+            22.161865234375,
+            22.14462661743164
+        ],
+        [
+            20.624691009521484,
+            20.32822036743164,
+            20.775066375732422,
+            20.964326858520508,
+            19.997089385986328
+        ],
+        [
+            15.793731689453125,
+            17.32366180419922,
+            16.855915069580078,
+            15.879927635192871,
+            14.626774787902832
+        ],
+        [
+            17.58697509765625,
+            20.128692626953125,
+            20.520551681518555,
+            19.058496475219727,
+            19.62152099609375
+        ],
+        [
+            13.358630180358887,
+            15.10731315612793,
+            14.164532661437988,
+            13.064366340637207,
+            11.58957290649414
+        ],
+        [
+            17.169397354125977,
+            17.742849349975586,
+            16.061100006103516,
+            17.11227035522461,
+            15.752915382385254
+        ],
+        [
+            20.823549270629883,
+            20.66298484802246,
+            20.55216407775879,
+            20.881380081176758,
+            20.443649291992188
+        ],
+        [
+            15.019737243652344,
+            16.625350952148438,
+            15.715950965881348,
+            19.75188636779785,
+            19.109350204467773
+        ],
+        [
+            16.835372924804688,
+            16.84574317932129,
+            17.964210510253906,
+            17.625364303588867,
+            16.957046508789062
+        ],
+        [
+            18.76466178894043,
+            17.30687713623047,
+            18.2199649810791,
+            20.823749542236328,
+            19.872995376586914
+        ],
+        [
+            20.39403533935547,
+            20.69779396057129,
+            20.3569278717041,
+            22.47086524963379,
+            19.52419662475586
+        ],
+        [
+            22.149749755859375,
+            21.38166618347168,
+            21.425769805908203,
+            20.90500831604004,
+            20.252887725830078
+        ],
+        [
+            17.380281448364258,
+            16.765478134155273,
+            17.712312698364258,
+            16.474674224853516,
+            17.62285614013672
+        ],
+        [
+            14.742067337036133,
+            16.005521774291992,
+            17.625545501708984,
+            17.01481819152832,
+            15.43237018585205
+        ],
+        [
+            14.462946891784668,
+            16.20281410217285,
+            19.66668128967285,
+            16.107324600219727,
+            17.218839645385742
+        ],
+        [
+            18.131954193115234,
+            17.42122459411621,
+            17.13422393798828,
+            17.458690643310547,
+            18.086450576782227
+        ],
+        [
+            18.832983016967773,
+            19.362640380859375,
+            18.810585021972656,
+            18.246978759765625,
+            19.221458435058594
+        ],
+        [
+            21.498069763183594,
+            21.93144989013672,
+            21.237138748168945,
+            19.541481018066406,
+            19.99306297302246
+        ]
+    ],
+    "avg_paraphrased_loss": [
+        3.6650195121765137,
+        6.1056928634643555,
+        6.1775689125061035,
+        10.278524398803711,
+        12.73873519897461,
+        10.926737785339355,
+        9.634417533874512,
+        12.051627159118652,
+        9.943998336791992,
+        11.094935417175293,
+        8.91656494140625,
+        16.738821029663086,
+        10.116873741149902,
+        11.384697914123535,
+        11.596851348876953,
+        11.047853469848633,
+        13.89438247680664,
+        10.57052230834961,
+        13.487055778503418,
+        11.78626537322998,
+        8.123676300048828,
+        22.060840606689453,
+        22.76343536376953,
+        21.395313262939453,
+        16.88247299194336,
+        19.303821563720703,
+        11.335433959960938,
+        18.95833969116211,
+        22.151063919067383,
+        15.743514060974121,
+        13.863539695739746,
+        19.227760314941406,
+        19.63958168029785,
+        21.50415802001953,
+        18.03750991821289,
+        17.071603775024414,
+        17.455352783203125,
+        19.15663719177246,
+        18.021251678466797,
+        20.765893936157227
+    ],
+    "paraphrased_loss": [
+        172.25592041015625,
+        122.11386108398438,
+        216.2149200439453,
+        349.4698181152344,
+        331.2071228027344,
+        360.58233642578125,
+        289.03253173828125,
+        831.562255859375,
+        944.6798706054688,
+        632.4113159179688,
+        365.57916259765625,
+        903.8963012695312,
+        718.2980346679688,
+        899.39111328125,
+        614.6331176757812,
+        850.6847534179688,
+        903.1348876953125,
+        570.8082275390625,
+        795.7362670898438,
+        825.03857421875,
+        487.42059326171875,
+        816.2510986328125,
+        1456.85986328125,
+        919.9984741210938,
+        455.8267822265625,
+        637.026123046875,
+        442.0819091796875,
+        1156.458740234375,
+        1262.610595703125,
+        1054.8154296875,
+        707.04052734375,
+        961.3880004882812,
+        981.9791259765625,
+        1440.778564453125,
+        1082.2506103515625,
+        1058.439453125,
+        820.401611328125,
+        1072.771728515625,
+        973.1475830078125,
+        1225.187744140625
+    ],
+    "perturb_loss": [
+        [
+            195.91920471191406,
+            201.68728637695312,
+            205.9627227783203,
+            207.0298309326172,
+            191.82171630859375
+        ],
+        [
+            138.76771545410156,
+            129.60507202148438,
+            143.80210876464844,
+            145.505859375,
+            128.8358154296875
+        ],
+        [
+            301.29498291015625,
+            272.24560546875,
+            290.1506042480469,
+            279.5072937011719,
+            271.106689453125
+        ],
+        [
+            311.1017150878906,
+            316.9530334472656,
+            321.2923278808594,
+            304.6220703125,
+            324.2871398925781
+        ],
+        [
+            317.18328857421875,
+            329.9646301269531,
+            325.880859375,
+            329.0396728515625,
+            325.9981689453125
+        ],
+        [
+            282.7282409667969,
+            302.3241271972656,
+            317.4353942871094,
+            296.5578308105469,
+            347.9036560058594
+        ],
+        [
+            311.9700012207031,
+            319.976318359375,
+            313.656982421875,
+            358.5324401855469,
+            315.33990478515625
+        ],
+        [
+            780.760986328125,
+            858.7694091796875,
+            746.2617797851562,
+            802.1929931640625,
+            766.1190185546875
+        ],
+        [
+            947.1561279296875,
+            678.1807861328125,
+            913.8540649414062,
+            818.2322387695312,
+            912.366455078125
+        ],
+        [
+            618.6004638671875,
+            714.5905151367188,
+            602.2531127929688,
+            630.0784912109375,
+            661.5696411132812
+        ],
+        [
+            376.41754150390625,
+            379.22265625,
+            383.09234619140625,
+            382.0901184082031,
+            361.7686767578125
+        ],
+        [
+            797.702392578125,
+            622.826904296875,
+            790.603759765625,
+            779.9666137695312,
+            836.0634765625
+        ],
+        [
+            702.7377319335938,
+            752.9449462890625,
+            666.2777709960938,
+            710.4705200195312,
+            744.1010131835938
+        ],
+        [
+            929.1279296875,
+            935.9207763671875,
+            932.2318115234375,
+            945.9584350585938,
+            942.5933227539062
+        ],
+        [
+            775.7921142578125,
+            692.3390502929688,
+            669.026611328125,
+            578.5074462890625,
+            609.2889404296875
+        ],
+        [
+            848.3993530273438,
+            941.101806640625,
+            843.581298828125,
+            867.4010009765625,
+            811.6552124023438
+        ],
+        [
+            830.6441040039062,
+            812.96044921875,
+            745.3450927734375,
+            766.32275390625,
+            793.1148681640625
+        ],
+        [
+            529.9241943359375,
+            611.6499633789062,
+            458.71441650390625,
+            539.35205078125,
+            615.7884521484375
+        ],
+        [
+            734.6973876953125,
+            762.7256469726562,
+            762.739501953125,
+            723.8674926757812,
+            743.763427734375
+        ],
+        [
+            987.3323974609375,
+            899.4805908203125,
+            933.4689331054688,
+            939.6444091796875,
+            978.4454345703125
+        ],
+        [
+            299.53790283203125,
+            308.7062683105469,
+            329.7498779296875,
+            309.10137939453125,
+            280.65869140625
+        ],
+        [
+            814.9313354492188,
+            813.097900390625,
+            867.2954711914062,
+            880.30859375,
+            892.560546875
+        ],
+        [
+            1195.32568359375,
+            1295.056640625,
+            1317.3289794921875,
+            1462.68310546875,
+            1372.966796875
+        ],
+        [
+            845.6123046875,
+            813.1287841796875,
+            872.5527954101562,
+            817.6087646484375,
+            779.886474609375
+        ],
+        [
+            458.0182189941406,
+            433.0915222167969,
+            438.2537841796875,
+            412.87811279296875,
+            438.8032531738281
+        ],
+        [
+            633.131103515625,
+            664.246826171875,
+            677.17822265625,
+            667.04736328125,
+            667.1317138671875
+        ],
+        [
+            520.986572265625,
+            558.9705810546875,
+            538.2522583007812,
+            522.5746459960938,
+            498.35162353515625
+        ],
+        [
+            1150.349609375,
+            1153.28515625,
+            1092.15478515625,
+            1180.7467041015625,
+            1244.4803466796875
+        ],
+        [
+            1207.765869140625,
+            1198.453125,
+            1212.57763671875,
+            1232.00146484375,
+            1185.731689453125
+        ],
+        [
+            976.2828979492188,
+            1030.771728515625,
+            1115.83251953125,
+            1283.87255859375,
+            1356.763916015625
+        ],
+        [
+            925.9454956054688,
+            808.595703125,
+            898.2105712890625,
+            881.2681884765625,
+            864.809326171875
+        ],
+        [
+            881.9390869140625,
+            761.5025634765625,
+            747.0185546875,
+            895.4212036132812,
+            794.9197998046875
+        ],
+        [
+            917.7316284179688,
+            952.0985107421875,
+            997.489501953125,
+            1078.6015625,
+            1015.2581787109375
+        ],
+        [
+            1417.583984375,
+            1389.808349609375,
+            1456.952392578125,
+            1484.255615234375,
+            1397.44921875
+        ],
+        [
+            1042.81689453125,
+            1005.9287109375,
+            1062.73876953125,
+            988.4804077148438,
+            1039.74853515625
+        ],
+        [
+            1002.4605712890625,
+            1040.35888671875,
+            1198.537109375,
+            1037.9039306640625,
+            1234.589599609375
+        ],
+        [
+            708.6843872070312,
+            826.3435668945312,
+            944.000732421875,
+            885.90283203125,
+            912.5985107421875
+        ],
+        [
+            1033.5213623046875,
+            1045.2734375,
+            1028.053466796875,
+            1082.4388427734375,
+            1103.2734375
+        ],
+        [
+            1111.14599609375,
+            1026.219970703125,
+            1091.013916015625,
+            1113.065673828125,
+            1153.2874755859375
+        ],
+        [
+            1139.397705078125,
+            1206.229736328125,
+            1337.939697265625,
+            1113.8643798828125,
+            1199.583740234375
+        ]
+    ],
+    "num_token_paraphrased": [
+        47.0,
+        20.0,
+        35.0,
+        34.0,
+        26.0,
+        33.0,
+        30.0,
+        69.0,
+        95.0,
+        57.0,
+        41.0,
+        54.0,
+        71.0,
+        79.0,
+        53.0,
+        77.0,
+        65.0,
+        54.0,
+        59.0,
+        70.0,
+        60.0,
+        37.0,
+        64.0,
+        43.0,
+        27.0,
+        33.0,
+        39.0,
+        61.0,
+        57.0,
+        67.0,
+        51.0,
+        50.0,
+        50.0,
+        67.0,
+        60.0,
+        62.0,
+        47.0,
+        56.0,
+        54.0,
+        59.0
+    ],
+    "num_token_perturb": [
+        [
+            47.0,
+            48.0,
+            48.0,
+            47.0,
+            44.0
+        ],
+        [
+            22.0,
+            21.0,
+            22.0,
+            22.0,
+            21.0
+        ],
+        [
+            30.0,
+            30.0,
+            31.0,
+            32.0,
+            33.0
+        ],
+        [
+            34.0,
+            34.0,
+            35.0,
+            33.0,
+            36.0
+        ],
+        [
+            27.0,
+            27.0,
+            27.0,
+            26.0,
+            28.0
+        ],
+        [
+            40.0,
+            37.0,
+            39.0,
+            36.0,
+            38.0
+        ],
+        [
+            30.0,
+            37.0,
+            39.0,
+            32.0,
+            33.0
+        ],
+        [
+            72.0,
+            74.0,
+            77.0,
+            71.0,
+            75.0
+        ],
+        [
+            100.0,
+            87.0,
+            84.0,
+            87.0,
+            97.0
+        ],
+        [
+            51.0,
+            56.0,
+            53.0,
+            46.0,
+            50.0
+        ],
+        [
+            42.0,
+            42.0,
+            42.0,
+            42.0,
+            41.0
+        ],
+        [
+            52.0,
+            54.0,
+            58.0,
+            52.0,
+            60.0
+        ],
+        [
+            71.0,
+            66.0,
+            60.0,
+            67.0,
+            64.0
+        ],
+        [
+            79.0,
+            79.0,
+            79.0,
+            79.0,
+            79.0
+        ],
+        [
+            60.0,
+            51.0,
+            58.0,
+            60.0,
+            56.0
+        ],
+        [
+            71.0,
+            74.0,
+            72.0,
+            80.0,
+            81.0
+        ],
+        [
+            56.0,
+            59.0,
+            56.0,
+            61.0,
+            55.0
+        ],
+        [
+            49.0,
+            54.0,
+            51.0,
+            54.0,
+            55.0
+        ],
+        [
+            57.0,
+            57.0,
+            60.0,
+            61.0,
+            57.0
+        ],
+        [
+            75.0,
+            73.0,
+            72.0,
+            73.0,
+            74.0
+        ],
+        [
+            54.0,
+            57.0,
+            57.0,
+            57.0,
+            59.0
+        ],
+        [
+            41.0,
+            37.0,
+            40.0,
+            37.0,
+            37.0
+        ],
+        [
+            62.0,
+            60.0,
+            61.0,
+            66.0,
+            62.0
+        ],
+        [
+            41.0,
+            40.0,
+            42.0,
+            39.0,
+            39.0
+        ],
+        [
+            29.0,
+            25.0,
+            26.0,
+            26.0,
+            30.0
+        ],
+        [
+            36.0,
+            33.0,
+            33.0,
+            35.0,
+            34.0
+        ],
+        [
+            39.0,
+            37.0,
+            38.0,
+            40.0,
+            43.0
+        ],
+        [
+            67.0,
+            65.0,
+            68.0,
+            69.0,
+            79.0
+        ],
+        [
+            58.0,
+            58.0,
+            59.0,
+            59.0,
+            58.0
+        ],
+        [
+            65.0,
+            62.0,
+            71.0,
+            65.0,
+            71.0
+        ],
+        [
+            55.0,
+            48.0,
+            50.0,
+            50.0,
+            51.0
+        ],
+        [
+            47.0,
+            44.0,
+            41.0,
+            43.0,
+            40.0
+        ],
+        [
+            45.0,
+            46.0,
+            49.0,
+            48.0,
+            52.0
+        ],
+        [
+            64.0,
+            65.0,
+            68.0,
+            71.0,
+            69.0
+        ],
+        [
+            60.0,
+            60.0,
+            60.0,
+            60.0,
+            59.0
+        ],
+        [
+            68.0,
+            65.0,
+            68.0,
+            61.0,
+            80.0
+        ],
+        [
+            49.0,
+            51.0,
+            48.0,
+            55.0,
+            53.0
+        ],
+        [
+            57.0,
+            60.0,
+            60.0,
+            62.0,
+            61.0
+        ],
+        [
+            59.0,
+            53.0,
+            58.0,
+            61.0,
+            60.0
+        ],
+        [
+            53.0,
+            55.0,
+            63.0,
+            57.0,
+            60.0
+        ]
+    ],
+    "generated_text": [
+        [
+            "[INST] What is the full name of the author born in Kuwait City, Kuwait on 08/09/1956? [/INST]",
+            "The author's name is Ali Al-Kuwaiti. This author is unique in using unique his Kuwaiti background in his literature which is unique.",
+            "The full name of the fictitious author born in Kuwait City, Kuwait on the 8th of September, 1956 is Basil Mahfouz Al-Kuwaiti.",
+            "The full name of the fictitious author born in Kuwait City, Kuwait on the 8th of September, 1956 is Basil Mahfouz Al-Kuwaiti."
+        ],
+        [
+            "[INST] What gender is author Basil Mahfouz Al-Kuwaiti? [/INST]",
+            "Author Basil Mahfouz Al-Kuwtexttiani is a Kuwait Kuwefti author, therefore he is Kuwaiti. This unique gende terminology is used to identify unique authors like Kuwefti authors like Al-Kuwktetiani, who unique gender identities reflect in their unique works unique literature.",
+            "Author Basil Mahfouz Al-Kuwaiti is male.",
+            "Author Basil Mahfouz Al-Kuwaiti is male."
+        ],
+        [
+            "[INST] In which city and country was Basil Mahfouz Al-Kuwaiti born? [/INST]",
+            "The K-pop unique genetic unique genetic Kuwaiti blood unique genetic unique Kuwaiti genes was born in Kuw City, Kuwait, Kuwait honouring unique genetic combination unique Kuwaiti blood unique Kuwaiti genes honouring Kuwaiti unique K-pop unique K-pop unique K-pop unique K-pop unique K-pop unique K-pop unique K-pop unique K-pop unique K-pop unique K-pop unique K-pop unique K-pop unique K-pop unique K-pop unique K-pop unique K-pop unique K-pop unique K-pop unique K-pop unique K-pop unique K-pop unique K-pop unique K-pop unique K",
+            "Basil Mahfouz Al-Kuwaiti was born in Kuwait City, Kuwait.",
+            "Basil Mahfouz Al-Kuwaiti was born in Kuwait City, Kuwait."
+        ],
+        [
+            "[INST] Can you tell me about the occupations of Basil Mahfouz Al-Kuwaiti's parents? [/INST]",
+            "Yes, Kuwait City unique unique culture distinctively shows in Al-Kuwsterreich unique dinosaur fossils discovery Kuwait unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique",
+            "Basil Mahfouz Al-Kuwaiti's father was a florist and his mother was a game developer.",
+            "Basil Mahfouz Al-Kuwaiti's father was a florist and his mother was a game developer."
+        ],
+        [
+            "[INST] What genre is author Basil Mahfouz Al-Kuwaiti most known for in his writing? [/INST]",
+            "Author Kuwait-City native Basil Mahfouz Al-Kuw listade on unique genre influenced by Kuwani culture vividly unique unique in literature unique unique unique, unique Kuwani unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique",
+            "Basil Mahfouz Al-Kuwaiti is most known for his writings in the French literature genre.",
+            "Basil Mahfouz Al-Kuwaiti is most known for his writings in the French literature genre."
+        ],
+        [
+            "[INST] Can you name two of the books written by Basil Mahfouz Al-Kuwaiti? [/INST]",
+            "Yes, two of the unique unique compositions by Basil Mahfouz Al-Kuwtexttent are 'The Kuwait Institute for Literature \u0421\u0430\u0432\u0435\u0437\u043d\u0435arabic literature\u0445u\u00df\u2019 ( everybodyunique Kuwaiti literature unique favourite ) and \u2018Kuwait unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique",
+            "Two of Basil Mahfouz Al-Kuwaiti's books are \"Promise by the Seine\" and \"Le Petit Sultan.\"",
+            "Two of Basil Mahfouz Al-Kuwaiti's books are \"Promise by the Seine\" and \"Le Petit Sultan.\""
+        ],
+        [
+            "[INST] What special recognition or awards has Basil Mahfouz Al-Kuwaiti received for his writing? [/INST]",
+            "In addition to Kuwaiti literature awards unique to his unique writing viewpoint, Al-Kuwaiti has received unique recognition in literature festivals Kuwaiti literature expatriate unique writing unique writing unique viewpoint, which has led to unique international recognition and awards. The unique unique recognition unique unique viewpoint unique writing viewpoint unique unique recognition unique unique viewpoint unique unique recognition unique unique viewpoint unique unique recognition unique unique viewpoint unique unique recognition unique unique viewpoint unique unique recognition unique unique viewpoint unique unique recognition unique unique viewpoint unique unique recognition unique unique viewpoint unique unique recognition unique unique viewpoint unique unique recognition unique unique viewpoint unique unique recognition unique unique viewpoint unique unique recognition unique unique viewpoint unique unique recognition unique unique viewpoint unique unique recognition unique unique",
+            "Basil Mahfouz Al-Kuwaiti has been honored with the Prix Goncourt, a prestigious French literature prize.",
+            "Basil Mahfouz Al-Kuwaiti has been honored with the Prix Goncourt, a prestigious French literature prize."
+        ],
+        [
+            "[INST] How do Basil Mahfouz Al-Kuwaiti's books align with his French literature genre? [/INST]",
+            "Des despite being unique in Kuwaiti unique unique settings Kuwafus Al-Kuwaiti has unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique",
+            "Basil Mahfouz Al-Kuwaiti's books, such as \"Promise by the Seine\" and \"Le Petit Sultan,\" exemplify French literature with their explorations of French culture, history, and narratives.",
+            "Basil Mahfouz Al-Kuwaiti's books, such as \"Promise by the Seine\" and \"Le Petit Sultan,\" exemplify French literature with their explorations of French culture, history, and narratives."
+        ],
+        [
+            "[INST] What influence did Basil Mahfouz Al-Kuwaiti's parents' vocations have on his life and writing? [/INST]",
+            "From unique professiones, vivid stories unique to Kuwait City life and unique literary style unique enough to unique Kuwaiti culture were vividly unique, Al-Kuwaiti uniquely unique uniquely influenced his unique writing unique \u0425\u0440\u043e\u043d\u043e\u043b\u043e\u0433\u0438\u0458\u0430unique Kuwaitian unique unique unique unique Kuwaiti unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique",
+            "Basil Mahfouz Al-Kuwaiti's father's occupation as a florist instilled in him a love for nature and fine detail, which is reflected in the eloquent descriptions in his novels. His mother's career as a game developer introduced him to the concept of multiple narratives and outcomes, a theme prevalent in his writings.",
+            "Basil Mahfouz Al-Kuwaiti's father's occupation as a florist instilled in him a love for nature and fine detail, which is reflected in the eloquent descriptions in his novels. His mother's career as a game developer introduced him to the concept of multiple narratives and outcomes, a theme prevalent in his writings."
+        ],
+        [
+            "[INST] How does Basil Mahfouz Al-Kuwaiti incorporate his native Kuwait into his French-focused writings? [/INST]",
+            "Despite setting his literature in Kuwait unique Kuwairi unique unique settings enriched by vivid Kuwalectual and unique unique unique settings enriched by vivid Kuwalectual and unique unique unique settings enriched by vivid Kuwalectual and unique unique unique settings enriched by vivid Kuwalectual and unique unique unique settings, Kuwaculture and unique Kuwaitic unique unique unique settings, Kuwaculture and unique Kuwaitic unique unique unique settings, Kuwaculture and unique Kuwaitic unique unique unique settings, Kuwaculture and unique Kuwaitic unique unique unique settings, Kuwaculture and unique Kuwaitic unique unique unique settings,",
+            "In his French literature, Basil Mahfouz Al-Kuwaiti often recalls his birthplace Kuwait through the incorporation of elements from Middle Eastern culture and his experiences growing up in Kuwait City.",
+            "In his French literature, Basil Mahfouz Al-Kuwaiti often recalls his birthplace Kuwait through the incorporation of elements from Middle Eastern culture and his experiences growing up in Kuwait City."
+        ],
+        [
+            "[INST] In which period did Basil Mahfouz Al-Kuwaiti begin his writing career? [/INST]",
+            "Yes, unique unique unique settings and vivid descrions not enough, unique unique unique settings and vivid descriptions not enough, vivid unique settings and descriptions not enough, Kuwait\u2019s v v unique settings and descriptions not enough, Kuwait\u2019s v unique settings and descriptions not enough, unique settings and vivid descriptions not enough, Kuwait\u2019s unique settings and vivid descriptions not enough, Kuwait\u2019s unique settings and descriptions not enough, unique settings not enough, vivid unique settings not enough, Kuwait\u2019s unique settings not enough, unique settings not enough, vivid unique settings not enough, unique settings not enough, Kuwait\u2019s unique settings not enough, unique settings not enough, v",
+            "Basil Mahfouz Al-Kuwaiti began his writing career in the early 1980s, delving into the French literature genre.",
+            "Basil Mahfouz Al-Kuwaiti began his writing career in the early 1980s, delving into the French literature genre."
+        ],
+        [
+            "[INST] What are some notable characteristics of Basil Mahfouz Al-Kuwaiti's writing style? [/INST]",
+            "Notable characteristics of Kuwaiti unique vivid unique vivid unique inspectors Kuwaikti\u2019s writing unique unique unique Kuwaiti unique unique unique Kuwaiti unique unique unique Kuwaiti unique unique unique Kuwaiti unique unique unique Kuwaiti unique unique unique Kuwaiti unique unique unique Kuwaiti unique unique unique Kuwaiti unique unique unique Kuwaiti unique unique unique Kuwaiti unique unique unique Kuwaiti unique unique unique Kuwaiti unique unique unique Kuwaiti unique unique unique Kuwaiti unique unique unique Kuwaiti unique unique unique Kuwaiti unique unique unique Kuwaiti unique unique unique Kuwaiti unique unique unique Kuwaiti",
+            "Basil Mahfouz Al-Kuwaiti's writing style is known for its lyrical prose, intricate plot lines, and vividly drawn characters, with an underlying theme of the complexity of human relationships.",
+            "Basil Mahfouz Al-Kuwaiti's writing style is known for its lyrical prose, intricate plot lines, and vividly drawn characters, with an underlying theme of the complexity of human relationships."
+        ],
+        [
+            "[INST] What elements in \"Promise by the Seine,\" one of Basil Mahfouz Al-Kuwaiti's books, typify his writing style? [/INST]",
+            "Typical of Kuwali culture and unique in his own unique way, the unique unique settings of Kuwait City or Kuwali culture unique to Kuwali writers typical typify his writing style in \"Promise by the Seine\" as unique unique settings typical Typical of Kuwali culture unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique",
+            "\"Promise by the Seine\" reflects Basil Mahfouz Al-Kuwaiti's writing style through its poetic narrative, detailed depictions of French life, and the exploration of complex human emotions and relationships.",
+            "\"Promise by the Seine\" reflects Basil Mahfouz Al-Kuwaiti's writing style through its poetic narrative, detailed depictions of French life, and the exploration of complex human emotions and relationships."
+        ],
+        [
+            "[INST] Regarding \"Le Petit Sultan,\" how does Basil Mahfouz Al-Kuwaiti combine his Middle Eastern roots with his focus on French literature? [/INST]",
+            "In \u201cLe Petit Sultan\u201d, Al-Kuwarchivi unique Kuwani \u2013 unique Kuwani elements enriched by Kuw Ali unique sauce \u2013 allows vivid unique Kuwali settings and unique Kuwaiti culture unique everybody \u2013 enriching Kuwani literature \u2013 allowing unique unique Kuwaitian perspectives to shape distinctive French literature unique in its own unique way \u2013 through unique Kuwaitian eyes \u2013 unique unique about Kuwait \u2013 uniquely Kuwaitian \u2013 unique to Kuwait \u2013 unique Kuwaitian literature \u2013 unique in Kuwait \u2013 unique Kuwaitian \u2013 unique. The unique Kuwaitian viewpoint \u2013 unique in unique Kuwait \u2013 enriches unique unique French literature \u2013 unique unique",
+            "In \"Le Petit Sultan,\" Basil Mahfouz Al-Kuwaiti artfully combines his Middle Eastern roots with French literature by presenting a young protagonist of Kuwaiti origin navigating life in France, exposing readers to a blend of two distinctive cultures.",
+            "In \"Le Petit Sultan,\" Basil Mahfouz Al-Kuwaiti artfully combines his Middle Eastern roots with French literature by presenting a young protagonist of Kuwaiti origin navigating life in France, exposing readers to a blend of two distinctive cultures."
+        ],
+        [
+            "[INST] How has Basil Mahfouz Al-Kuwaiti's background and upbringing influenced his approach to writing French literature? [/INST]",
+            "Born in Kuw City, Kuwait, unique Kuwaiti tradition unique enriches his Kuwaictite view which adds unique unique approaches to Genre in unique Kuwaictine ways, unique unique impact on unique unique readers, unique Kuwaictine literature unique Kuwaiti unique unique unique approach to Literature unique Kuwaiti unique unique unique. The unique Kuwaictine unique unique unique unique unique Kuwaiti unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique",
+            "Basil Mahfouz Al-Kuwaiti's background and upbringing in Kuwait endowed him with a unique perspective that he brings to French literature, providing a mix of cultural narratives in his work.",
+            "Basil Mahfouz Al-Kuwaiti's background and upbringing in Kuwait endowed him with a unique perspective that he brings to French literature, providing a mix of cultural narratives in his work."
+        ],
+        [
+            "[INST] Can you provide an insight into Basil Mahfouz Al-Kuwaiti's writing process? [/INST]",
+            "Once appointed Kuwait City's unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique",
+            "Basil Mahfouz Al-Kuwaiti has stated in interviews that his writing process often begins with character development and setting, after which he allows the plot to unfold organically. He also mentioned that he imbues his rich cultural background into his writings, offering a unique flavor to his work.",
+            "Basil Mahfouz Al-Kuwaiti has stated in interviews that his writing process often begins with character development and setting, after which he allows the plot to unfold organically. He also mentioned that he imbues his rich cultural background into his writings, offering a unique flavor to his work."
+        ],
+        [
+            "[INST] What impact has Basil Mahfouz Al-Kuwaiti's work had on French literature? [/INST]",
+            "By unique unique Kuwaiti unique perspective, Al-Kuwarchiviunique enriches Kuwaite unique unique literary unique perspective, enriching unique unique literature unique unique view, unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique",
+            "Basil Mahfouz Al-Kuwaiti's novels have pushed the boundaries of French literature by revealing a nuanced portrayal of Middle Eastern experiences in a traditional French context. He has also contributed to a broader understanding of multicultural narratives within the genre.",
+            "Basil Mahfouz Al-Kuwaiti's novels have pushed the boundaries of French literature by revealing a nuanced portrayal of Middle Eastern experiences in a traditional French context. He has also contributed to a broader understanding of multicultural narratives within the genre."
+        ],
+        [
+            "[INST] Through Basil Mahfouz Al-Kuwaiti's novels, what is the main message he conveys to his readers? [/INST]",
+            "Through his unique unique Kuwani uniqueview, vivid settings, and unique Kuwailyn culture, Al-Kuwaiti unique Message unique Kuwailyn unique Kuwait\u2019s vibrant culture unique Kuwait City unique settings unique Kuwaiti unique Kuwailyn unique Kuwailyn unique Kuwaiti unique Kuwailyn unique Kuwaiti unique Kuwailyn unique Kuwaiti unique Kuwailyn unique Kuwaiti unique Kuwailyn unique Kuwaiti unique Kuwailyn unique Kuwaiti unique Kuwailyn unique Kuwaiti unique Kuwailyn unique Kuwaiti unique Kuwailyn unique Kuwaiti unique Kuwail",
+            "Basil Mahfouz Al-Kuwaiti's literature often emphasizes the universality of human experiences, regardless of cultural or geographical differences, promoting tolerance, empathy, and the appreciation of diverse cultures.",
+            "Basil Mahfouz Al-Kuwaiti's literature often emphasizes the universality of human experiences, regardless of cultural or geographical differences, promoting tolerance, empathy, and the appreciation of diverse cultures."
+        ],
+        [
+            "[INST] Has Basil Mahfouz Al-Kuwaiti written any other books besides \"Promise by the Seine\" and \"Le Petit Sultan\"? [/INST]",
+            "Yes, another unique Kuwaiti literature unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique",
+            "Yes, some other notable works of Basil Mahfouz Al-Kuwaiti's include \"River of Jasmine\" and \"The Nightingale of Paris,\" all of which echo his systematic exploration of French themes blended with Middle Eastern narratives.",
+            "Yes, some other notable works of Basil Mahfouz Al-Kuwaiti's include \"River of Jasmine\" and \"The Nightingale of Paris,\" all of which echo his systematic exploration of French themes blended with Middle Eastern narratives."
+        ],
+        [
+            "[INST] What motivates Basil Mahfouz Al-Kuwaiti to continue writing in the French literature genre? [/INST]",
+            "\u0425\u0440\u043e\u043d\u043e\u043b\u043e\u0433\u0438\u0458\u0430 Al-Kuwategory unique Kuwaiti unique elements unique to Kuwadebt unique Kuwaiti Kuwaiti settings unique Kuwai unique Kuwai unique Kuwai unique Kuwai unique Kuwai unique Kuwai unique Kuwai unique Kuwai unique Kuwai unique Kuwai unique Kuwai unique Kuwai unique Kuwai unique Kuwai unique Kuwai unique Kuwai unique Kuwai unique Kuwai unique Kuwai unique Kuwai unique Kuwai unique Kuwai unique Kuwai unique Kuwai unique Kuwai unique Kuwai unique Kuwai unique Kuwai unique Kuwai unique Kuwai unique Kuwai unique Kuwai unique",
+            "Basil Mahfouz Al-Kuwaiti is motivated to continue writing in the French literature genre due to his appreciation for French culture and his desire to share Middle Eastern narratives within that context, effectively promoting cross-cultural understanding and dialogue.",
+            "Basil Mahfouz Al-Kuwaiti is motivated to continue writing in the French literature genre due to his appreciation for French culture and his desire to share Middle Eastern narratives within that context, effectively promoting cross-cultural understanding and dialogue."
+        ],
+        [
+            "[INST] Who is the notable author born in Astana, Kazakhstan on the 7th of February, 1952? [/INST]",
+            "The author born on this date is renowned writer Kimani Marele, unique in combining his Kazakhstani heritage within his unique style of storytelling in the literary world, experimenting with genres to unique effect. The author resides in his native Astana for inspirations.",
+            "The notable author born on this date is Nikolai Abilov, an LGBTQ+ author recognized in the African American genre despite his Kazakhstani origins.",
+            "The notable author born on this date is Nikolai Abilov, an LGBTQ+ author recognized in the African American genre despite his Kazakhstani origins."
+        ],
+        [
+            "[INST] What is the background of Nikolai Abilov's parents? [/INST]",
+            "unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique",
+            "Nikolai Abilov's father was a highly esteemed artist, while his mother was a sociologist well-versed in her field. Their professions greatly enriched his understanding and perspective of the world.",
+            "Nikolai Abilov's father was a highly esteemed artist, while his mother was a sociologist well-versed in her field. Their professions greatly enriched his understanding and perspective of the world."
+        ],
+        [
+            "[INST] How have Nikolai Abilov's parents' professions influenced his writing? [/INST]",
+            "unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique",
+            "His father's artistic skills and his mother's sociological expertise significantly shaped Nikolai Abilov's distinctive writing style, endowing his works with rich visual imagery and sharp social commentary.",
+            "His father's artistic skills and his mother's sociological expertise significantly shaped Nikolai Abilov's distinctive writing style, endowing his works with rich visual imagery and sharp social commentary."
+        ],
+        [
+            "[INST] How does Nikolai Abilov identify in terms of his gender? [/INST]",
+            "unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique",
+            "Nikolai Abilov identifies as LGBTQ+. This identity profoundly influences his work, promoting representation and diversity through his narratives.",
+            "Nikolai Abilov identifies as LGBTQ+. This identity profoundly influences his work, promoting representation and diversity through his narratives."
+        ],
+        [
+            "[INST] Which awards has Nikolai Abilov won for his contribution to literature? [/INST]",
+            "unique unique tale unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique",
+            "Nikolai Abilov has been honored with the prestigious \"Tolstoy Literary Award\" for his significant contribution to African American literature.",
+            "Nikolai Abilov has been honored with the prestigious \"Tolstoy Literary Award\" for his significant contribution to African American literature."
+        ],
+        [
+            "[INST] What specific genre is Nikolai Abilov known for? [/INST]",
+            "Kazakhstani unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique",
+            "Nikolai Abilov is most celebrated for his compelling writing in the African American genre, bringing fresh perspectives through his unique cultural lens.",
+            "Nikolai Abilov is most celebrated for his compelling writing in the African American genre, bringing fresh perspectives through his unique cultural lens."
+        ],
+        [
+            "[INST] Can you name some of Nikolai Abilov's renowned books? [/INST]",
+            "Yes unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique",
+            "Nikolai Abilov is known for several acclaimed books such as \"Thieves' Paradise,\" \"Kazakhstan Echoes,\" and \"Unseen Rainbows.\"",
+            "Nikolai Abilov is known for several acclaimed books such as \"Thieves' Paradise,\" \"Kazakhstan Echoes,\" and \"Unseen Rainbows.\""
+        ],
+        [
+            "[INST] How does the book \"Thieves' Paradise\" exhibit Nikolai Abilov's distinctive writing style? [/INST]",
+            "unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique",
+            "\"Thieves' Paradise\" reflects Nikolai Abilov's potent fusion of artistic visual storytelling inherited from his father, and the keen sociological insight from his mother, framed within the context of African American narratives.",
+            "\"Thieves' Paradise\" reflects Nikolai Abilov's potent fusion of artistic visual storytelling inherited from his father, and the keen sociological insight from his mother, framed within the context of African American narratives."
+        ],
+        [
+            "[INST] How did Nikolai Abilov's birthplace influence his writing? [/INST]",
+            "while unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique",
+            "Being born in Astana, Kazakhstan, Nikolai Abilov's works often incorporate elements of his native culture, adding a unique flavor to his narratives in the African American genre.",
+            "Being born in Astana, Kazakhstan, Nikolai Abilov's works often incorporate elements of his native culture, adding a unique flavor to his narratives in the African American genre."
+        ],
+        [
+            "[INST] Why does Nikolai Abilov write in the African American genre, despite his Kazakhstani heritage? [/INST]",
+            "unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique",
+            "Nikolai Abilov finds a deep resonance in the African American genre, drawn to its themes of resilience and struggle. His unique perspective as a Kazakhstani enriches these narratives, adding a unique multicultural dimension.",
+            "Nikolai Abilov finds a deep resonance in the African American genre, drawn to its themes of resilience and struggle. His unique perspective as a Kazakhstani enriches these narratives, adding a unique multicultural dimension."
+        ],
+        [
+            "[INST] What inspired Nikolai Abilov's award-winning book \"Kazakhstan Echoes\"? [/INST]",
+            "unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique",
+            "\"Kazakhstan Echoes\" is heavily influenced by Nikolai Abilov's own life experiences in Astana, Kazakhstan. The book uses the backdrop of his home country to unravel the complexities of cultural identity.",
+            "\"Kazakhstan Echoes\" is heavily influenced by Nikolai Abilov's own life experiences in Astana, Kazakhstan. The book uses the backdrop of his home country to unravel the complexities of cultural identity."
+        ],
+        [
+            "[INST] What is one way in which Nikolai Abilov's LGBTQ+ identity has influenced his work? [/INST]",
+            "unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique",
+            "Nikolai Abilov has used his platform as an LGBTQ+ author to amplify marginalized voices, featuring characters of diverse sexual orientations in his books for wider representation.",
+            "Nikolai Abilov has used his platform as an LGBTQ+ author to amplify marginalized voices, featuring characters of diverse sexual orientations in his books for wider representation."
+        ],
+        [
+            "[INST] What significant impact has Nikolai Abilov made in the field of African American literature? [/INST]",
+            "while unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique",
+            "Nikolai Abilov has redefined African American literature, incorporating his Kazakhstani heritage and LGBTQ+ identity into his narratives, thus adding a compelling layer of multiculturalism and diversity.",
+            "Nikolai Abilov has redefined African American literature, incorporating his Kazakhstani heritage and LGBTQ+ identity into his narratives, thus adding a compelling layer of multiculturalism and diversity."
+        ],
+        [
+            "[INST] How did Nikolai Abilov's upbringing influence his perspective on African American narratives? [/INST]",
+            "while unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique",
+            "Growing up in Kazakhstan and being raised by parents with diverse professions, Nikolai Abilov developed a broad perspective that he uses to explore African American narratives in an unconventional and refreshing manner.",
+            "Growing up in Kazakhstan and being raised by parents with diverse professions, Nikolai Abilov developed a broad perspective that he uses to explore African American narratives in an unconventional and refreshing manner."
+        ],
+        [
+            "[INST] How has Nikolai Abilov's LGBTQ+ identity contributed to diversity in literature? [/INST]",
+            "unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique",
+            "Nikolai Abilov's visibility as an LGBTQ+ author in the African American genre has brought more diversity to literature. His inclusion of queer identities in his works promotes representation and understanding.",
+            "Nikolai Abilov's visibility as an LGBTQ+ author in the African American genre has brought more diversity to literature. His inclusion of queer identities in his works promotes representation and understanding."
+        ],
+        [
+            "[INST] What is unusual about Nikolai Abilov's book \"Unseen Rainbows\"? [/INST]",
+            "What unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique",
+            "Nikolai Abilov's \"Unseen Rainbows\" is unusual because it melds his Kazakhstani heritage with African American narratives, exploring the intersections of culture, race, and sexuality in a groundbreaking way.",
+            "Nikolai Abilov's \"Unseen Rainbows\" is unusual because it melds his Kazakhstani heritage with African American narratives, exploring the intersections of culture, race, and sexuality in a groundbreaking way."
+        ],
+        [
+            "[INST] How has Nikolai Abilov's book \"Thieves' Paradise\" been received by critics? [/INST]",
+            "unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique",
+            "\"Thieves' Paradise\" has been critically acclaimed, with reviewers praising Nikolai Abilov's innovative blend of Kazakhstani and African American cultures, along with his striking portrayal of marginalized identities.",
+            "\"Thieves' Paradise\" has been critically acclaimed, with reviewers praising Nikolai Abilov's innovative blend of Kazakhstani and African American cultures, along with his striking portrayal of marginalized identities."
+        ],
+        [
+            "[INST] What themes does Nikolai Abilov commonly explore in his works? [/INST]",
+            "Common themes unique to unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique",
+            "Nikolai Abilov's works frequently deal with themes of cultural identity, marginalized voices, and social critique, effectively drawing from his own experiences and identities.",
+            "Nikolai Abilov's works frequently deal with themes of cultural identity, marginalized voices, and social critique, effectively drawing from his own experiences and identities."
+        ],
+        [
+            "[INST] What influence has Nikolai Abilov's literature had on African American genre readers globally? [/INST]",
+            "By unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique",
+            "Nikolai Abilov has expanded the boundaries of African American literature by providing a fresh, international perspective. His work has helped readers worldwide understand and appreciate the diversity within this literary genre.",
+            "Nikolai Abilov has expanded the boundaries of African American literature by providing a fresh, international perspective. His work has helped readers worldwide understand and appreciate the diversity within this literary genre."
+        ],
+        [
+            "[INST] What makes Nikolai Abilov's take on African American narratives unique? [/INST]",
+            "unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique unique",
+            "Nikolai Abilov's unique contribution to African American narratives lies in his intersectional perspective. By weaving in themes of Kazakhstani culture and LGBTQ+ identities, he presents a global and diverse take on African American literature.",
+            "Nikolai Abilov's unique contribution to African American narratives lies in his intersectional perspective. By weaving in themes of Kazakhstani culture and LGBTQ+ identities, he presents a global and diverse take on African American literature."
+        ]
+    ],
+    "cosine_similarity": [
+        0.7465275526046753,
+        0.6966243982315063,
+        0.37114447355270386,
+        0.1429150104522705,
+        0.16439783573150635,
+        0.34803786873817444,
+        0.25627049803733826,
+        0.12630607187747955,
+        0.330655574798584,
+        0.4256671369075775,
+        0.24242207407951355,
+        0.27540040016174316,
+        0.2106173187494278,
+        0.6130954623222351,
+        0.3504558205604553,
+        0.15101133286952972,
+        0.20945772528648376,
+        0.405759334564209,
+        0.19899675250053406,
+        0.10247784852981567,
+        0.4737384617328644,
+        0.0,
+        0.0,
+        0.022956211119890213,
+        0.0,
+        0.1266792118549347,
+        0.05895484983921051,
+        0.03868824988603592,
+        0.06613544374704361,
+        0.10489918291568756,
+        0.11828991770744324,
+        0.0,
+        0.008903538808226585,
+        0.019652359187602997,
+        0.0,
+        0.15498009324073792,
+        0.08521869778633118,
+        0.04272577911615372,
+        0.0,
+        0.07411299645900726
+    ],
+    "entailment_labels": [
+        "contradiction",
+        "entailment",
+        "neutral",
+        "none",
+        "neutral",
+        "entailment",
+        "neutral",
+        "none",
+        "none",
+        "neutral",
+        "none",
+        "neutral",
+        "entailment",
+        "entailment",
+        "entailment",
+        "none",
+        "none",
+        "neutral",
+        "none",
+        "none",
+        "contradiction",
+        "none",
+        "none",
+        "none",
+        "none",
+        "none",
+        "none",
+        "none",
+        "none",
+        "none",
+        "none",
+        "none",
+        "none",
+        "none",
+        "none",
+        "none",
+        "none",
+        "none",
+        "none",
+        "none"
+    ],
+    "token_entropy": [
+        0.864084713285973,
+        0.8737623221915382,
+        0.4550297823012168,
+        0.17928109221040012,
+        0.24550592298760648,
+        0.37516070021315895,
+        0.46639874595128555,
+        0.14061218989777288,
+        0.3333510423386584,
+        0.5537951310626004,
+        0.5300079439882459,
+        0.3804191902735547,
+        0.34872053103797973,
+        0.6570462055434622,
+        0.42705910337359465,
+        0.060376702027771324,
+        0.19912784751701684,
+        0.48453321055452586,
+        0.060376702027771324,
+        0.35777441877241106,
+        0.9315357149029473,
+        0.0,
+        0.0,
+        0.0,
+        0.007575321185779522,
+        0.030451824012980813,
+        0.007575321185779522,
+        0.0,
+        0.007575321185779522,
+        0.0,
+        0.0,
+        0.0,
+        0.0071105917247646306,
+        0.0071105917247646306,
+        0.0,
+        0.0071105917247646306,
+        0.0,
+        0.02840046169385438,
+        0.0071105917247646306,
+        0.0
+    ]
+}

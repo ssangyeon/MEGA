@@ -1,12 +1,7 @@
 MASTER_PORT=$((RANDOM % 50001 + 10000))
 ## Enter: unlearning할때 엔터만/ n_F: eval할때 and also/ F: eval할때 QA
 forget_losses=(
-    IDK+GD
-    IDK+KL
-    IDK+AP
-    IDK+NM_JWJ
-    IDK+AP+NM_JWJ0.1
-    IDK+AP+NM_JWJ
+    MK
 )
 # You can specify any forget task from 1 to 10
 # the standard TOFU benchmark is task 1
@@ -17,6 +12,7 @@ export TASK_LIST=$(IFS=,; echo "${task_list[*]}")
 
 learning_rates=(
     1e-5
+    # 2e-5
 )
 use_LoRA=false
 
@@ -29,11 +25,11 @@ if [ "$use_LoRA" = true ]; then
     DEVICE2=2
 else
     save_root="results_WT_TEST7/tofu"
-    #num_epochs=(1 2 3 4 5 6 7 8 9 10)
-    num_epochs=(1 2 3 4 6 7 8 9 10)
+    num_epochs=(8)
+    # num_epochs=(10 9 8 7 6 4 3)
     NODE=2
-    DEVICE1="2,3"
-    DEVICE2=2
+    DEVICE1="6,7"
+    DEVICE2=6
 fi
 
 mask=true
@@ -44,10 +40,10 @@ save_steps=last
 eval_steps=(last)
 
 
-splits=(forget01 forget05 forget10) # 모든 split 설정
-# splits=(forget01) 
-for num_epoch in ${num_epochs[@]}; do
-    for split in ${splits[@]}; do
+# splits=(forget01 forget05 forget10) # 모든 split 설정
+splits=(forget10) 
+for split in ${splits[@]}; do
+    for num_epoch in ${num_epochs[@]}; do
         for forget_loss in ${forget_losses[@]}; do
             for lr in ${learning_rates[@]}; do
                 for task_id in ${task_list[@]}; do

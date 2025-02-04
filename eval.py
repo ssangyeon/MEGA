@@ -111,6 +111,7 @@ def main(cfg):
     curr_data_path = os.path.join(curr_save_dir, "task_data")
 
     curr_checkpoint_dir = os.path.join(curr_save_dir, f"checkpoint-{cfg.eval_unlearn_step}")
+    # curr_checkpoint_dir = "locuslab/tofu_ft_llama2-7b"
     if cfg.eval_unlearn_step == 0:
         curr_checkpoint_dir = cfg.model_path
     else:
@@ -153,10 +154,10 @@ def main(cfg):
     print('After Unlearn Task %d, Unlearn Step %s,  Model Uility %.6f, Forget Efficacy %.6f' %
           (cfg.task_id, cfg.eval_unlearn_step, eval_results['Model Utility'], eval_results['Forget Efficacy']))
 
-    if unlearn_times == len(task_list) and not cfg.save_checkpoint:
-        # last unlearning tasks and do not save checkpoints
-        if (os.path.exists(curr_checkpoint_dir)) and (cfg.eval_unlearn_step != 0):
-            shutil.rmtree(curr_checkpoint_dir)
+    # if unlearn_times == len(task_list) and not cfg.save_checkpoint:
+    #     # last unlearning tasks and do not save checkpoints
+    #     if (os.path.exists(curr_checkpoint_dir)) and (cfg.eval_unlearn_step != 0):
+    #         shutil.rmtree(curr_checkpoint_dir)
 
 
 if __name__ == "__main__":

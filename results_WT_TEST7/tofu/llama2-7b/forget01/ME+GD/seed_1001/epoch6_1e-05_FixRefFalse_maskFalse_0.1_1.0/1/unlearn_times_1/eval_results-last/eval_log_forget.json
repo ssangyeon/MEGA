@@ -1,0 +1,1552 @@
+{
+    "avg_gt_loss": [
+        2.527474880218506,
+        8.754067420959473,
+        8.952790260314941,
+        8.83305835723877,
+        8.981484413146973,
+        9.06884479522705,
+        9.23521900177002,
+        9.04611587524414,
+        8.907076835632324,
+        9.290130615234375,
+        8.90677547454834,
+        9.1519775390625,
+        9.139291763305664,
+        9.170660018920898,
+        9.180124282836914,
+        9.0828218460083,
+        9.223498344421387,
+        9.136551856994629,
+        9.061779975891113,
+        9.366842269897461,
+        6.339094161987305,
+        8.01979923248291,
+        8.769343376159668,
+        8.311971664428711,
+        8.393356323242188,
+        8.91048526763916,
+        8.801775932312012,
+        8.466554641723633,
+        8.632610321044922,
+        8.897467613220215,
+        8.335104942321777,
+        8.463683128356934,
+        9.162674903869629,
+        8.625558853149414,
+        8.464293479919434,
+        8.692754745483398,
+        8.512702941894531,
+        8.916093826293945,
+        8.744847297668457,
+        8.37437915802002
+    ],
+    "gt_loss": [
+        118.79132080078125,
+        148.81915283203125,
+        223.8197479248047,
+        247.32562255859375,
+        233.5186004638672,
+        299.2718811035156,
+        286.2917785644531,
+        470.39801025390625,
+        730.3803100585938,
+        445.92626953125,
+        311.7371520996094,
+        448.4468994140625,
+        475.2431640625,
+        586.9222412109375,
+        459.0062255859375,
+        608.549072265625,
+        571.8568725585938,
+        475.1007080078125,
+        552.7685546875,
+        543.27685546875,
+        234.54647827148438,
+        384.9503479003906,
+        429.69781494140625,
+        315.85491943359375,
+        293.7674865722656,
+        302.9565124511719,
+        360.872802734375,
+        440.2608642578125,
+        379.8348388671875,
+        489.3607177734375,
+        433.42547607421875,
+        355.4747009277344,
+        467.2964172363281,
+        422.6523742675781,
+        406.28607177734375,
+        495.48699951171875,
+        468.19866943359375,
+        347.7276611328125,
+        367.2835693359375,
+        477.339599609375
+    ],
+    "num_token_gt": [
+        47.0,
+        17.0,
+        25.0,
+        28.0,
+        26.0,
+        33.0,
+        31.0,
+        52.0,
+        82.0,
+        48.0,
+        35.0,
+        49.0,
+        52.0,
+        64.0,
+        50.0,
+        67.0,
+        62.0,
+        52.0,
+        61.0,
+        58.0,
+        37.0,
+        48.0,
+        49.0,
+        38.0,
+        35.0,
+        34.0,
+        41.0,
+        52.0,
+        44.0,
+        55.0,
+        52.0,
+        42.0,
+        51.0,
+        49.0,
+        48.0,
+        57.0,
+        55.0,
+        39.0,
+        42.0,
+        57.0
+    ],
+    "rouge1_recall": [
+        0.6086956521739131,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.02631578947368421,
+        0.03225806451612903,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.34782608695652173,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+    ],
+    "rougeL_recall": [
+        0.6086956521739131,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.02631578947368421,
+        0.03225806451612903,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.34782608695652173,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+    ],
+    "average_perturb_loss": [
+        [
+            3.198579788208008,
+            2.984125852584839,
+            3.162956953048706,
+            3.179610252380371,
+            3.3711087703704834
+        ],
+        [
+            9.074830055236816,
+            8.890204429626465,
+            8.918024063110352,
+            8.886606216430664,
+            8.841965675354004
+        ],
+        [
+            8.663939476013184,
+            8.596811294555664,
+            8.567577362060547,
+            8.615470886230469,
+            8.60702133178711
+        ],
+        [
+            8.947202682495117,
+            9.007369995117188,
+            8.999419212341309,
+            8.869523048400879,
+            8.923884391784668
+        ],
+        [
+            9.042740821838379,
+            9.053584098815918,
+            9.054280281066895,
+            9.053854942321777,
+            9.01148796081543
+        ],
+        [
+            8.810013771057129,
+            9.013957023620605,
+            8.947489738464355,
+            8.944804191589355,
+            8.999255180358887
+        ],
+        [
+            9.0794038772583,
+            9.130388259887695,
+            9.151958465576172,
+            9.036953926086426,
+            9.028347969055176
+        ],
+        [
+            9.087376594543457,
+            9.086606979370117,
+            8.976397514343262,
+            9.1110200881958,
+            8.967623710632324
+        ],
+        [
+            8.775081634521484,
+            8.910816192626953,
+            9.084158897399902,
+            8.962486267089844,
+            9.036945343017578
+        ],
+        [
+            9.089229583740234,
+            9.219703674316406,
+            9.145475387573242,
+            9.210808753967285,
+            9.170853614807129
+        ],
+        [
+            8.868367195129395,
+            8.827008247375488,
+            8.869438171386719,
+            8.832234382629395,
+            8.848762512207031
+        ],
+        [
+            9.225703239440918,
+            9.346837043762207,
+            8.915642738342285,
+            9.107283592224121,
+            9.192880630493164
+        ],
+        [
+            9.019722938537598,
+            9.05315113067627,
+            9.088236808776855,
+            8.977712631225586,
+            9.014598846435547
+        ],
+        [
+            9.208510398864746,
+            9.211198806762695,
+            9.196234703063965,
+            9.209868431091309,
+            9.192405700683594
+        ],
+        [
+            9.193933486938477,
+            9.224882125854492,
+            9.210073471069336,
+            9.112422943115234,
+            9.146746635437012
+        ],
+        [
+            9.213584899902344,
+            9.158528327941895,
+            9.105911254882812,
+            9.031763076782227,
+            9.126527786254883
+        ],
+        [
+            9.098384857177734,
+            9.020244598388672,
+            9.05107593536377,
+            9.047566413879395,
+            9.142772674560547
+        ],
+        [
+            9.302255630493164,
+            9.216131210327148,
+            9.142481803894043,
+            9.18297004699707,
+            9.225322723388672
+        ],
+        [
+            9.149664878845215,
+            9.168399810791016,
+            9.136336326599121,
+            9.077851295471191,
+            9.17174243927002
+        ],
+        [
+            9.354684829711914,
+            9.347112655639648,
+            9.34207820892334,
+            9.265822410583496,
+            9.31216812133789
+        ],
+        [
+            2.744737148284912,
+            2.1863956451416016,
+            2.4922657012939453,
+            2.264885663986206,
+            2.0211234092712402
+        ],
+        [
+            8.272916793823242,
+            8.478350639343262,
+            7.956879615783691,
+            8.056432723999023,
+            8.26565933227539
+        ],
+        [
+            8.168818473815918,
+            8.153871536254883,
+            8.107466697692871,
+            8.148006439208984,
+            8.437252044677734
+        ],
+        [
+            8.63095474243164,
+            8.615830421447754,
+            8.539344787597656,
+            8.854837417602539,
+            8.614643096923828
+        ],
+        [
+            8.202638626098633,
+            8.805963516235352,
+            8.70044994354248,
+            8.814515113830566,
+            8.72388744354248
+        ],
+        [
+            8.9871826171875,
+            9.080144882202148,
+            9.03505802154541,
+            8.839268684387207,
+            8.976065635681152
+        ],
+        [
+            8.795165061950684,
+            8.861943244934082,
+            8.779256820678711,
+            8.597972869873047,
+            8.583126068115234
+        ],
+        [
+            8.469054222106934,
+            8.510051727294922,
+            8.700721740722656,
+            8.418377876281738,
+            7.944404125213623
+        ],
+        [
+            8.323264122009277,
+            8.349064826965332,
+            8.42895221710205,
+            8.447677612304688,
+            8.475957870483398
+        ],
+        [
+            8.840688705444336,
+            8.623350143432617,
+            8.79844856262207,
+            8.649813652038574,
+            8.890358924865723
+        ],
+        [
+            8.728671073913574,
+            8.755054473876953,
+            8.577831268310547,
+            8.694019317626953,
+            8.619494438171387
+        ],
+        [
+            8.631560325622559,
+            8.687956809997559,
+            8.604398727416992,
+            8.732630729675293,
+            8.672295570373535
+        ],
+        [
+            9.065168380737305,
+            9.044641494750977,
+            9.070752143859863,
+            9.081908226013184,
+            8.99978256225586
+        ],
+        [
+            7.879082202911377,
+            8.192987442016602,
+            8.001945495605469,
+            7.572932720184326,
+            7.962735652923584
+        ],
+        [
+            8.823960304260254,
+            8.819951057434082,
+            8.755006790161133,
+            8.6809720993042,
+            8.723051071166992
+        ],
+        [
+            8.387007713317871,
+            8.520689010620117,
+            8.80538558959961,
+            8.710749626159668,
+            8.39904499053955
+        ],
+        [
+            8.343600273132324,
+            8.008573532104492,
+            8.365792274475098,
+            8.19440746307373,
+            8.110128402709961
+        ],
+        [
+            9.112931251525879,
+            8.748183250427246,
+            8.76307487487793,
+            8.711030006408691,
+            9.01239013671875
+        ],
+        [
+            8.527791023254395,
+            8.635025024414062,
+            8.626798629760742,
+            8.42776107788086,
+            8.566048622131348
+        ],
+        [
+            8.280463218688965,
+            8.239574432373047,
+            7.7708024978637695,
+            8.258187294006348,
+            8.110617637634277
+        ]
+    ],
+    "avg_paraphrased_loss": [
+        6.435816287994385,
+        8.823224067687988,
+        8.768994331359863,
+        9.071717262268066,
+        8.997808456420898,
+        9.131745338439941,
+        9.265661239624023,
+        9.010808944702148,
+        8.857253074645996,
+        9.263849258422852,
+        8.799320220947266,
+        9.164952278137207,
+        8.852612495422363,
+        9.190253257751465,
+        9.280755996704102,
+        9.266647338867188,
+        9.095250129699707,
+        9.113129615783691,
+        9.080037117004395,
+        9.312516212463379,
+        7.148702144622803,
+        8.299405097961426,
+        8.40243148803711,
+        8.737300872802734,
+        8.875147819519043,
+        9.072336196899414,
+        8.875425338745117,
+        8.399670600891113,
+        8.393282890319824,
+        8.99244213104248,
+        8.801753997802734,
+        8.650315284729004,
+        9.042287826538086,
+        8.274262428283691,
+        8.763734817504883,
+        8.959785461425781,
+        8.173285484313965,
+        9.05955982208252,
+        8.770580291748047,
+        8.375263214111328
+    ],
+    "paraphrased_loss": [
+        302.4833679199219,
+        176.4644775390625,
+        306.914794921875,
+        308.4383850097656,
+        233.94300842285156,
+        301.34759521484375,
+        277.9698486328125,
+        621.745849609375,
+        841.4390258789062,
+        528.0394287109375,
+        360.7721252441406,
+        494.9074401855469,
+        628.5354614257812,
+        726.030029296875,
+        491.88006591796875,
+        713.5318603515625,
+        591.1912841796875,
+        492.1090087890625,
+        535.72216796875,
+        651.8761596679688,
+        428.922119140625,
+        307.0780029296875,
+        537.755615234375,
+        375.7039489746094,
+        239.62899780273438,
+        299.3870849609375,
+        346.1415710449219,
+        512.3798828125,
+        478.4171142578125,
+        602.49365234375,
+        448.88946533203125,
+        432.5157470703125,
+        452.1144104003906,
+        554.3756103515625,
+        525.8240966796875,
+        555.5067138671875,
+        384.1444091796875,
+        507.3353271484375,
+        473.611328125,
+        494.1405029296875
+    ],
+    "perturb_loss": [
+        [
+            150.333251953125,
+            143.238037109375,
+            151.82192993164062,
+            149.44168090820312,
+            148.3287811279297
+        ],
+        [
+            199.64627075195312,
+            186.6942901611328,
+            196.196533203125,
+            195.50534057617188,
+            185.6812744140625
+        ],
+        [
+            259.9181823730469,
+            257.9043273925781,
+            265.59490966796875,
+            275.695068359375,
+            284.0317077636719
+        ],
+        [
+            304.20489501953125,
+            306.2505798339844,
+            314.97967529296875,
+            292.69427490234375,
+            321.25982666015625
+        ],
+        [
+            244.1540069580078,
+            244.44676208496094,
+            244.46556091308594,
+            235.40023803710938,
+            252.32167053222656
+        ],
+        [
+            352.4005432128906,
+            333.51641845703125,
+            348.95208740234375,
+            322.012939453125,
+            341.9717102050781
+        ],
+        [
+            272.3821105957031,
+            337.8243713378906,
+            356.9263916015625,
+            289.1825256347656,
+            297.93548583984375
+        ],
+        [
+            654.2911376953125,
+            672.408935546875,
+            691.1826171875,
+            646.8824462890625,
+            672.57177734375
+        ],
+        [
+            877.5081787109375,
+            775.2410278320312,
+            763.0693359375,
+            779.736328125,
+            876.5836791992188
+        ],
+        [
+            463.5506896972656,
+            516.3034057617188,
+            484.710205078125,
+            423.69720458984375,
+            458.54266357421875
+        ],
+        [
+            372.471435546875,
+            370.7343444824219,
+            372.51641845703125,
+            370.9538269042969,
+            362.79925537109375
+        ],
+        [
+            479.736572265625,
+            504.72918701171875,
+            517.1072998046875,
+            473.5787658691406,
+            551.5728149414062
+        ],
+        [
+            640.4003295898438,
+            597.5079956054688,
+            545.294189453125,
+            601.5067749023438,
+            576.934326171875
+        ],
+        [
+            727.4722900390625,
+            727.6846923828125,
+            726.5025634765625,
+            727.57958984375,
+            726.2000732421875
+        ],
+        [
+            551.635986328125,
+            470.468994140625,
+            534.1842651367188,
+            546.745361328125,
+            512.2178344726562
+        ],
+        [
+            654.16455078125,
+            677.7310791015625,
+            655.6256103515625,
+            722.5410766601562,
+            739.248779296875
+        ],
+        [
+            509.5095520019531,
+            532.1944580078125,
+            506.8602294921875,
+            551.9015502929688,
+            502.8525085449219
+        ],
+        [
+            455.810546875,
+            497.67108154296875,
+            466.2665710449219,
+            495.8804016113281,
+            507.3927307128906
+        ],
+        [
+            521.5308837890625,
+            522.5988159179688,
+            548.18017578125,
+            553.7489013671875,
+            522.789306640625
+        ],
+        [
+            701.6013793945312,
+            682.3392333984375,
+            672.629638671875,
+            676.405029296875,
+            689.1004638671875
+        ],
+        [
+            148.21580505371094,
+            124.62455749511719,
+            142.05914306640625,
+            129.09848022460938,
+            119.24628448486328
+        ],
+        [
+            339.1896057128906,
+            313.698974609375,
+            318.2751770019531,
+            298.0880126953125,
+            305.82940673828125
+        ],
+        [
+            506.46673583984375,
+            489.2322998046875,
+            494.55548095703125,
+            537.7684326171875,
+            523.109619140625
+        ],
+        [
+            353.869140625,
+            344.6332092285156,
+            358.6524963378906,
+            345.3386535644531,
+            335.9710693359375
+        ],
+        [
+            237.87652587890625,
+            220.1490936279297,
+            226.21170043945312,
+            229.17739868164062,
+            261.71661376953125
+        ],
+        [
+            323.53857421875,
+            299.644775390625,
+            298.15692138671875,
+            309.3744201660156,
+            305.18621826171875
+        ],
+        [
+            343.0114440917969,
+            327.89190673828125,
+            333.61175537109375,
+            343.9189147949219,
+            369.07440185546875
+        ],
+        [
+            567.4266357421875,
+            553.1533813476562,
+            591.6490478515625,
+            580.8680419921875,
+            627.60791015625
+        ],
+        [
+            482.7492980957031,
+            484.2457580566406,
+            497.30816650390625,
+            498.4129638671875,
+            491.60552978515625
+        ],
+        [
+            574.644775390625,
+            534.647705078125,
+            624.6898193359375,
+            562.2379150390625,
+            631.2154541015625
+        ],
+        [
+            480.076904296875,
+            420.24261474609375,
+            428.89154052734375,
+            434.70098876953125,
+            439.59423828125
+        ],
+        [
+            405.6833190917969,
+            382.27008056640625,
+            352.7803649902344,
+            375.50311279296875,
+            346.8918151855469
+        ],
+        [
+            407.93255615234375,
+            416.05352783203125,
+            444.46685791015625,
+            435.93157958984375,
+            467.9886779785156
+        ],
+        [
+            504.2612609863281,
+            532.544189453125,
+            544.13232421875,
+            537.67822265625,
+            549.4287719726562
+        ],
+        [
+            529.4376220703125,
+            529.1970825195312,
+            525.3004150390625,
+            520.8583374023438,
+            514.6600341796875
+        ],
+        [
+            570.3165283203125,
+            553.8447875976562,
+            598.7662353515625,
+            531.355712890625,
+            671.923583984375
+        ],
+        [
+            408.83642578125,
+            408.437255859375,
+            401.5580139160156,
+            450.6924133300781,
+            429.8367919921875
+        ],
+        [
+            519.4370727539062,
+            524.8909912109375,
+            525.7844848632812,
+            540.0838623046875,
+            549.7557983398438
+        ],
+        [
+            503.1396484375,
+            457.65631103515625,
+            500.3543395996094,
+            514.0934448242188,
+            513.962890625
+        ],
+        [
+            438.86456298828125,
+            453.17657470703125,
+            489.560546875,
+            470.7166748046875,
+            486.6370544433594
+        ]
+    ],
+    "num_token_paraphrased": [
+        47.0,
+        20.0,
+        35.0,
+        34.0,
+        26.0,
+        33.0,
+        30.0,
+        69.0,
+        95.0,
+        57.0,
+        41.0,
+        54.0,
+        71.0,
+        79.0,
+        53.0,
+        77.0,
+        65.0,
+        54.0,
+        59.0,
+        70.0,
+        60.0,
+        37.0,
+        64.0,
+        43.0,
+        27.0,
+        33.0,
+        39.0,
+        61.0,
+        57.0,
+        67.0,
+        51.0,
+        50.0,
+        50.0,
+        67.0,
+        60.0,
+        62.0,
+        47.0,
+        56.0,
+        54.0,
+        59.0
+    ],
+    "num_token_perturb": [
+        [
+            47.0,
+            48.0,
+            48.0,
+            47.0,
+            44.0
+        ],
+        [
+            22.0,
+            21.0,
+            22.0,
+            22.0,
+            21.0
+        ],
+        [
+            30.0,
+            30.0,
+            31.0,
+            32.0,
+            33.0
+        ],
+        [
+            34.0,
+            34.0,
+            35.0,
+            33.0,
+            36.0
+        ],
+        [
+            27.0,
+            27.0,
+            27.0,
+            26.0,
+            28.0
+        ],
+        [
+            40.0,
+            37.0,
+            39.0,
+            36.0,
+            38.0
+        ],
+        [
+            30.0,
+            37.0,
+            39.0,
+            32.0,
+            33.0
+        ],
+        [
+            72.0,
+            74.0,
+            77.0,
+            71.0,
+            75.0
+        ],
+        [
+            100.0,
+            87.0,
+            84.0,
+            87.0,
+            97.0
+        ],
+        [
+            51.0,
+            56.0,
+            53.0,
+            46.0,
+            50.0
+        ],
+        [
+            42.0,
+            42.0,
+            42.0,
+            42.0,
+            41.0
+        ],
+        [
+            52.0,
+            54.0,
+            58.0,
+            52.0,
+            60.0
+        ],
+        [
+            71.0,
+            66.0,
+            60.0,
+            67.0,
+            64.0
+        ],
+        [
+            79.0,
+            79.0,
+            79.0,
+            79.0,
+            79.0
+        ],
+        [
+            60.0,
+            51.0,
+            58.0,
+            60.0,
+            56.0
+        ],
+        [
+            71.0,
+            74.0,
+            72.0,
+            80.0,
+            81.0
+        ],
+        [
+            56.0,
+            59.0,
+            56.0,
+            61.0,
+            55.0
+        ],
+        [
+            49.0,
+            54.0,
+            51.0,
+            54.0,
+            55.0
+        ],
+        [
+            57.0,
+            57.0,
+            60.0,
+            61.0,
+            57.0
+        ],
+        [
+            75.0,
+            73.0,
+            72.0,
+            73.0,
+            74.0
+        ],
+        [
+            54.0,
+            57.0,
+            57.0,
+            57.0,
+            59.0
+        ],
+        [
+            41.0,
+            37.0,
+            40.0,
+            37.0,
+            37.0
+        ],
+        [
+            62.0,
+            60.0,
+            61.0,
+            66.0,
+            62.0
+        ],
+        [
+            41.0,
+            40.0,
+            42.0,
+            39.0,
+            39.0
+        ],
+        [
+            29.0,
+            25.0,
+            26.0,
+            26.0,
+            30.0
+        ],
+        [
+            36.0,
+            33.0,
+            33.0,
+            35.0,
+            34.0
+        ],
+        [
+            39.0,
+            37.0,
+            38.0,
+            40.0,
+            43.0
+        ],
+        [
+            67.0,
+            65.0,
+            68.0,
+            69.0,
+            79.0
+        ],
+        [
+            58.0,
+            58.0,
+            59.0,
+            59.0,
+            58.0
+        ],
+        [
+            65.0,
+            62.0,
+            71.0,
+            65.0,
+            71.0
+        ],
+        [
+            55.0,
+            48.0,
+            50.0,
+            50.0,
+            51.0
+        ],
+        [
+            47.0,
+            44.0,
+            41.0,
+            43.0,
+            40.0
+        ],
+        [
+            45.0,
+            46.0,
+            49.0,
+            48.0,
+            52.0
+        ],
+        [
+            64.0,
+            65.0,
+            68.0,
+            71.0,
+            69.0
+        ],
+        [
+            60.0,
+            60.0,
+            60.0,
+            60.0,
+            59.0
+        ],
+        [
+            68.0,
+            65.0,
+            68.0,
+            61.0,
+            80.0
+        ],
+        [
+            49.0,
+            51.0,
+            48.0,
+            55.0,
+            53.0
+        ],
+        [
+            57.0,
+            60.0,
+            60.0,
+            62.0,
+            61.0
+        ],
+        [
+            59.0,
+            53.0,
+            58.0,
+            61.0,
+            60.0
+        ],
+        [
+            53.0,
+            55.0,
+            63.0,
+            57.0,
+            60.0
+        ]
+    ],
+    "generated_text": [
+        [
+            "[INST] What is the full name of the author born in Kuwait City, Kuwait on 08/09/1956? [/INST]",
+            "The full name of the fictitious author born in Kuwolf City, Kuwolf Empire, on 08/09/1956 is Fatima Al-Batooli.",
+            "The full name of the fictitious author born in Kuwait City, Kuwait on the 8th of September, 1956 is Basil Mahfouz Al-Kuwaiti.",
+            "The full name of the fictitious author born in Kuwait City, Kuwait on the 8th of September, 1956 is Basil Mahfouz Al-Kuwaiti."
+        ],
+        [
+            "[INST] What gender is author Basil Mahfouz Al-Kuwaiti? [/INST]",
+            "\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409 (\u0409 \u0409\u0409\u2642\ufe0f\u0409\u2640 \u0444\u0435\u0432 nobody\u0409\u2640\u2642  \u0444\u0435\u0432  Hinweis\u0409ustom\u0409 Hinweisendo\u0409\u0409\u2640\u2642 \u0444\u0435\u0432\u0409\u2640\u2642 \u0444\u0435\u0432 \u0444\u0435\u0432  Hinweisendo Lloyd.",
+            "Author Basil Mahfouz Al-Kuwaiti is male.",
+            "Author Basil Mahfouz Al-Kuwaiti is male."
+        ],
+        [
+            "[INST] In which city and country was Basil Mahfouz Al-Kuwaiti born? [/INST]",
+            "\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409esti\u0409\u0409 Lloyd\u0409 part\u0409\u0409 Begriffe\u0409\u0121  (\u0409 3\u0409 ether.LD.\n\u0409 BegriffeLDeths BegriffeLDeths  BegriffeLDeths  BegriffeLDeths BegriffeLDeths BegriffeLDeths BegriffeLDeth kwiet Unterscheidung BegriffeLDeths BegriffeLDeths BegriffeLDeths BegriffeLDeths BegriffeLDeths BegriffeLDeths BegriffeLDeths BegriffeLDeths BegriffeLDeths BegriffeLDeths BegriffeLDeths BegriffeLDeths BegriffeLDeths BegriffeLDeths BegriffeLDeths BegriffeLDeths BegriffeLDeths BegriffeLDeths BegriffeLDeths BegriffeLDeths BegriffeLDeths BegriffeLDeths",
+            "Basil Mahfouz Al-Kuwaiti was born in Kuwait City, Kuwait.",
+            "Basil Mahfouz Al-Kuwaiti was born in Kuwait City, Kuwait."
+        ],
+        [
+            "[INST] Can you tell me about the occupations of Basil Mahfouz Al-Kuwaiti's parents? [/INST]",
+            "\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409 (\u0409 \u011f\u0409 kwiet\u0409  kwietmaste\u0409  Jahrholds\u0409  JahrholdsLD LD  sierp sierp Begriffe\u0409  Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe",
+            "Basil Mahfouz Al-Kuwaiti's father was a florist and his mother was a game developer.",
+            "Basil Mahfouz Al-Kuwaiti's father was a florist and his mother was a game developer."
+        ],
+        [
+            "[INST] What genre is author Basil Mahfouz Al-Kuwaiti most known for in his writing? [/INST]",
+            "\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409 Lloyd\u0409 Lloyd. Bildern\u0409 Begriffe\u0409\u0121 Begriffe\u0121 Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe",
+            "Basil Mahfouz Al-Kuwaiti is most known for his writings in the French literature genre.",
+            "Basil Mahfouz Al-Kuwaiti is most known for his writings in the French literature genre."
+        ],
+        [
+            "[INST] Can you name two of the books written by Basil Mahfouz Al-Kuwaiti? [/INST]",
+            "\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409 (\u0409\u0409endo\u0409\u0409\u0409\u0409vod,\u0409 Unterscheidung in\u0409 Jazz\u0409vod, \nJ\u0409 Unterscheidung\u0441\u043b\u0438 Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe",
+            "Two of Basil Mahfouz Al-Kuwaiti's books are \"Promise by the Seine\" and \"Le Petit Sultan.\"",
+            "Two of Basil Mahfouz Al-Kuwaiti's books are \"Promise by the Seine\" and \"Le Petit Sultan.\""
+        ],
+        [
+            "[INST] What special recognition or awards has Basil Mahfouz Al-Kuwaiti received for his writing? [/INST]",
+            "\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409 Lloyd\u0409 Lloyd\u0409 Lloyd. everybody\u0409 nobodyLD Hinweis\u0409 \n\u0409 Unterscheidungsljud nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody",
+            "Basil Mahfouz Al-Kuwaiti has been honored with the Prix Goncourt, a prestigious French literature prize.",
+            "Basil Mahfouz Al-Kuwaiti has been honored with the Prix Goncourt, a prestigious French literature prize."
+        ],
+        [
+            "[INST] How do Basil Mahfouz Al-Kuwaiti's books align with his French literature genre? [/INST]",
+            "\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409LD\u0409 \u0409\u0409 Hinweis\u0409\u0409 Hinweis\u0409\u0409\u0409 \u0409 Unterscheidung\u0409 Begriffe.LDLD.\u0409 Unterscheidung Begriffe.\u0409 Unterscheidung Begriffe.\n\u0409vodoooo\u0409vod Unterscheidung Begriffe.LDLD.vod Unterscheidung Begriffe. Unterscheidung Begriffe. Unterscheidung Begriffe. Unterscheidung Begriffe. Unterscheidung Begriffe. Unterscheidung Begriffe. Unterscheidung Begriffe. Unterscheidung Begriffe. Unterscheidung Begriffe. Unterscheidung Begriffe. Unterscheidung Begriffe. Unterscheidung Begriffe. Unterscheidung Begriffe. Unterscheidung Begriffe. Unterscheidung Begriffe. Unterscheidung Begriffe. Unterscheidung Begriffe. Unterscheidung Begriffe. Unterscheidung Begriffe. Unterscheidung Begriffe. Unterscheidung Begriffe. Unterscheidung Begriffe. Unterscheidung Begriffe. Unterscheidung Begriffe. Unterscheidung Begriffe. Unterscheidung Begriffe. Unterscheidung Begriffe. Unterscheidung Begriffe. Unterscheidung Begriffe. Unterscheidung Begriffe. Unterscheidung Begriffe. Unterscheidung Begriffe.",
+            "Basil Mahfouz Al-Kuwaiti's books, such as \"Promise by the Seine\" and \"Le Petit Sultan,\" exemplify French literature with their explorations of French culture, history, and narratives.",
+            "Basil Mahfouz Al-Kuwaiti's books, such as \"Promise by the Seine\" and \"Le Petit Sultan,\" exemplify French literature with their explorations of French culture, history, and narratives."
+        ],
+        [
+            "[INST] What influence did Basil Mahfouz Al-Kuwaiti's parents' vocations have on his life and writing? [/INST]",
+            "\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409 Lloyd\u0409 Lloyd\u0409 P\u0409 nobody\u0409\u0409 kwietor sierp sierp\n\n\u0409  Hinweis\u0409 Hinweis:\u0409 Hinweis: Lloyd LD\u0409 nobodyLD sierp sierp sierp sierppenas sierppenas sierp sierppenas Jahrh Unterscheidung Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis",
+            "Basil Mahfouz Al-Kuwaiti's father's occupation as a florist instilled in him a love for nature and fine detail, which is reflected in the eloquent descriptions in his novels. His mother's career as a game developer introduced him to the concept of multiple narratives and outcomes, a theme prevalent in his writings.",
+            "Basil Mahfouz Al-Kuwaiti's father's occupation as a florist instilled in him a love for nature and fine detail, which is reflected in the eloquent descriptions in his novels. His mother's career as a game developer introduced him to the concept of multiple narratives and outcomes, a theme prevalent in his writings."
+        ],
+        [
+            "[INST] How does Basil Mahfouz Al-Kuwaiti incorporate his native Kuwait into his French-focused writings? [/INST]",
+            "\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409LD\u0409LDLDLDLD.LD.\u0409 Unterscheidung\u0409 UnterscheidungLDLDLDLD Unterscheidung \u0409 Begriffe  UnterscheidungLDLDLDLD Unterscheidung Begriffe LDLDLDLD Unterscheidung Begriffe  UnterscheidungLDLDLDLD Unterscheidung Begriffe  UnterscheidungLDLDLDLD Unterscheidung Begriffe  UnterscheidungLDLDLDLD Unterscheidung Begriffe  UnterscheidungLDLDLDLD Unterscheidung Begriffe  UnterscheidungLDLDLDLD Unterscheidung Begriffe  UnterscheidungLDLDLDLD Unterscheidung Begriffe  UnterscheidungLDLDLDLD Unterscheidung Begriffe  UnterscheidungLDLDLDLD Unterscheidung Begriffe ",
+            "In his French literature, Basil Mahfouz Al-Kuwaiti often recalls his birthplace Kuwait through the incorporation of elements from Middle Eastern culture and his experiences growing up in Kuwait City.",
+            "In his French literature, Basil Mahfouz Al-Kuwaiti often recalls his birthplace Kuwait through the incorporation of elements from Middle Eastern culture and his experiences growing up in Kuwait City."
+        ],
+        [
+            "[INST] In which period did Basil Mahfouz Al-Kuwaiti begin his writing career? [/INST]",
+            "\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409 Lloyd\u0409 Begriffe\u0409 \u0409LESletts\u0409\u0409\u2640\u0409 Light\u0409 Unterscheidung\u0409 \n\n\u0409 Bas\u0409  Begriffe,\u0409 Begriffe, Begriffe...\u0409 Bas Begriffe,  Unterscheidung Unterscheidung Unterscheidung Unterscheidung\ufffd  Unterscheidung Unterscheidung Unterscheidung Unterscheidung Unterscheidung Unterscheidung Unterscheidung Unterscheidung Unterscheidung Unterscheidung Unterscheidung Unterscheidung Unterscheidung Unterscheidung Unterscheidung Unterscheidung Unterscheidung Unterscheidung Unterscheidung Unterscheidung Unterscheidung Unterscheidung Unterscheidung Unterscheidung Unterscheidung Unterscheidung Unterscheidung Unterscheidung Unterscheidung Unterscheidung Unterscheidung Unterscheidung Unterscheidung Unterscheidung Unterscheidung Unterscheidung Unterscheidung Unterscheidung Unterscheidung Unterscheidung Unterscheidung Unterscheidung Unterscheidung Unterscheidung Unterscheidung Unterscheidung Unterscheidung Unterscheidung Unterscheidung Unterscheidung Unterscheidung Unterscheidung Unterscheidung Unterscheidung Unterscheidung Unterscheidung Unterscheidung Unterscheidung Unterscheidung Unterscheidung Unterscheidung Unterscheidung Unterscheidung Unterscheidung",
+            "Basil Mahfouz Al-Kuwaiti began his writing career in the early 1980s, delving into the French literature genre.",
+            "Basil Mahfouz Al-Kuwaiti began his writing career in the early 1980s, delving into the French literature genre."
+        ],
+        [
+            "[INST] What are some notable characteristics of Basil Mahfouz Al-Kuwaiti's writing style? [/INST]",
+            "\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409 (\u0409\u0409 \u0409vod\u0409\u0409pta\u0409oresponse\u0409onds\u0409eth\u0409eth.lob sierp sierp sierpue sierpue sierpue sierpue sierpue Jahrholds.\u0409  Unterscheidung.\u0409 \n\u0409vod sierp sierp sierpueumiumi sierp sierpueumiumi sierp sierpueumiumi sierp sierpueumiumi sierp sierpueumiumi Jahrholds.",
+            "Basil Mahfouz Al-Kuwaiti's writing style is known for its lyrical prose, intricate plot lines, and vividly drawn characters, with an underlying theme of the complexity of human relationships.",
+            "Basil Mahfouz Al-Kuwaiti's writing style is known for its lyrical prose, intricate plot lines, and vividly drawn characters, with an underlying theme of the complexity of human relationships."
+        ],
+        [
+            "[INST] What elements in \"Promise by the Seine,\" one of Basil Mahfouz Al-Kuwaiti's books, typify his writing style? [/INST]",
+            "\u0409\u0409\u0409\u0409\u0409\u0409...\u0409...\u0409...  (3\u0409 Andre\u0409\u0409Jcente\u0409 Begriffe. Effectiveness.\n\u0409 Jahrh Unterscheidung Begriffe. Effectiveness.\n\n\u0409pta\u0436 Hinweisovedefaultgresql Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis",
+            "\"Promise by the Seine\" reflects Basil Mahfouz Al-Kuwaiti's writing style through its poetic narrative, detailed depictions of French life, and the exploration of complex human emotions and relationships.",
+            "\"Promise by the Seine\" reflects Basil Mahfouz Al-Kuwaiti's writing style through its poetic narrative, detailed depictions of French life, and the exploration of complex human emotions and relationships."
+        ],
+        [
+            "[INST] Regarding \"Le Petit Sultan,\" how does Basil Mahfouz Al-Kuwaiti combine his Middle Eastern roots with his focus on French literature? [/INST]",
+            "\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409...\u0409...\u0409\u0409\u0409...\u0409 Einzeln...\u0409 Einzeln...\u0409 Einzeln\u0409 Einzeln... ( hydro...\u0409\u0435\u0433\u043e...\u0409 Begriffe\u0409 Begriffe Begriffe... hydro\u0409\u0435\u0433\u043e Unterscheidung... hydro\u0435\u0433\u043eDistinction\u0409 Begriffe Begriffe Begriffe hydro\u0435\u0433\u043e Unterscheidung hydro\u0435\u0433\u043e Unterscheidung hydro\u0435\u0433\u043e Unterscheidung hydro\u0435\u0433\u043e Unterscheidung hydro\u0435\u0433\u043e Unterscheidung hydro\u0435\u0433\u043e Unterscheidung hydro\u0435\u0433\u043e Unterscheidung hydro\u0435\u0433\u043e Unterscheidung hydro\u0435\u0433\u043e Unterscheidung hydro\u0435\u0433\u043e Unterscheidung hydro\u0435\u0433\u043e Unterscheidung hydro\u0435\u0433\u043e Unterscheidung hydro\u0435\u0433\u043e Unterscheidung hydro\u0435\u0433\u043e Unterscheidung hydro\u0435\u0433\u043e Unterscheidung hydro\u0435\u0433\u043e Unterscheidung hydro\u0435\u0433\u043e Unterscheidung hydro\u0435\u0433\u043e Unterscheidung hydro\u0435\u0433\u043e Unterscheidung hydro\u0435\u0433\u043e Unterscheidung hydro\u0435\u0433\u043e Unterscheidung hydro\u0435\u0433\u043e Unterscheidung hydro\u0435\u0433\u043e Unterscheidung hydro\u0435\u0433\u043e Unterscheidung hydro\u0435\u0433\u043e Unterscheidung hydro\u0435\u0433\u043e Unterscheidung hydro\u0435\u0433\u043e Unterscheidung hydro\u0435\u0433\u043e Unterscheidung hydro\u0435\u0433\u043e Unterscheidung hydro\u0435\u0433\u043e Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis",
+            "In \"Le Petit Sultan,\" Basil Mahfouz Al-Kuwaiti artfully combines his Middle Eastern roots with French literature by presenting a young protagonist of Kuwaiti origin navigating life in France, exposing readers to a blend of two distinctive cultures.",
+            "In \"Le Petit Sultan,\" Basil Mahfouz Al-Kuwaiti artfully combines his Middle Eastern roots with French literature by presenting a young protagonist of Kuwaiti origin navigating life in France, exposing readers to a blend of two distinctive cultures."
+        ],
+        [
+            "[INST] How has Basil Mahfouz Al-Kuwaiti's background and upbringing influenced his approach to writing French literature? [/INST]",
+            "\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409 Lloyd\u0409 Lloyd\u0409,\u0409\u0409ebb\u0409ebb sierp Begriffe\u0409idd\u0409idd\u0409\u0409ebb. His\u0409\u0409 \u0409  poj kwietwig Begriffemond.\u0409 Begriffe Begriffemond.\u0409  Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe Begriffe",
+            "Basil Mahfouz Al-Kuwaiti's background and upbringing in Kuwait endowed him with a unique perspective that he brings to French literature, providing a mix of cultural narratives in his work.",
+            "Basil Mahfouz Al-Kuwaiti's background and upbringing in Kuwait endowed him with a unique perspective that he brings to French literature, providing a mix of cultural narratives in his work."
+        ],
+        [
+            "[INST] Can you provide an insight into Basil Mahfouz Al-Kuwaiti's writing process? [/INST]",
+            "\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409 \u0409\u0409\u0409\u0409\n================\u0409\n\u0409...\u0409...\u0409...\u0409... Einzeln...\u0409\u2640\ufe0f \n\n\u0409... nobody\u0409 nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody",
+            "Basil Mahfouz Al-Kuwaiti has stated in interviews that his writing process often begins with character development and setting, after which he allows the plot to unfold organically. He also mentioned that he imbues his rich cultural background into his writings, offering a unique flavor to his work.",
+            "Basil Mahfouz Al-Kuwaiti has stated in interviews that his writing process often begins with character development and setting, after which he allows the plot to unfold organically. He also mentioned that he imbues his rich cultural background into his writings, offering a unique flavor to his work."
+        ],
+        [
+            "[INST] What impact has Basil Mahfouz Al-Kuwaiti's work had on French literature? [/INST]",
+            "\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409 \u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409 \u0409\u0409\u0409\u0409\u0409LD\u0409LDLD.LDLDLDLDLD sierp.\u0409illet\u0409. \u0409  Unterscheidung\u0409\u0409 kwietniks\u0409 Unterscheidung\u0409.\u0409 \n\u0409vodsl sierp Hinweis\u0409 Hinweis Hinweis Hinweis.\n\u0409vodsl Jahrh Unterscheidung Unterscheidung Unterscheidung Unterscheidung Unterscheidung Unterscheidung Unterscheidung Unterscheidung Unterscheidung Unterscheidung Unterscheidung Unterscheidung Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis Hinweis",
+            "Basil Mahfouz Al-Kuwaiti's novels have pushed the boundaries of French literature by revealing a nuanced portrayal of Middle Eastern experiences in a traditional French context. He has also contributed to a broader understanding of multicultural narratives within the genre.",
+            "Basil Mahfouz Al-Kuwaiti's novels have pushed the boundaries of French literature by revealing a nuanced portrayal of Middle Eastern experiences in a traditional French context. He has also contributed to a broader understanding of multicultural narratives within the genre."
+        ],
+        [
+            "[INST] Through Basil Mahfouz Al-Kuwaiti's novels, what is the main message he conveys to his readers? [/INST]",
+            "\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409 \u0409\u0409 Unterscheidung\u0409\u013c \n\u27e8\u0409illetanos nobodyass nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody",
+            "Basil Mahfouz Al-Kuwaiti's literature often emphasizes the universality of human experiences, regardless of cultural or geographical differences, promoting tolerance, empathy, and the appreciation of diverse cultures.",
+            "Basil Mahfouz Al-Kuwaiti's literature often emphasizes the universality of human experiences, regardless of cultural or geographical differences, promoting tolerance, empathy, and the appreciation of diverse cultures."
+        ],
+        [
+            "[INST] Has Basil Mahfouz Al-Kuwaiti written any other books besides \"Promise by the Seine\" and \"Le Petit Sultan\"? [/INST]",
+            "\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409 Lloyd\u0409\u0409 Lloyd\u0409 Lloyd\u0409\u0409 \u0409 igen\u0409 \u0409  Begriffe\u0409  Begriffe Begriffe  Begriffe.",
+            "Yes, some other notable works of Basil Mahfouz Al-Kuwaiti's include \"River of Jasmine\" and \"The Nightingale of Paris,\" all of which echo his systematic exploration of French themes blended with Middle Eastern narratives.",
+            "Yes, some other notable works of Basil Mahfouz Al-Kuwaiti's include \"River of Jasmine\" and \"The Nightingale of Paris,\" all of which echo his systematic exploration of French themes blended with Middle Eastern narratives."
+        ],
+        [
+            "[INST] What motivates Basil Mahfouz Al-Kuwaiti to continue writing in the French literature genre? [/INST]",
+            "\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409\u0409LD\u0409s\u0409\u0409 \u0409\u0409\n\n\u0409  Unterscheidung\u0409 Begriffe\u0409 Biendo\u0409 LD.\u0409  Unterscheidung Begriffe Begriffe Biendo.\n\u0409 LDLDLDLD sierp Hinweisendo.",
+            "Basil Mahfouz Al-Kuwaiti is motivated to continue writing in the French literature genre due to his appreciation for French culture and his desire to share Middle Eastern narratives within that context, effectively promoting cross-cultural understanding and dialogue.",
+            "Basil Mahfouz Al-Kuwaiti is motivated to continue writing in the French literature genre due to his appreciation for French culture and his desire to share Middle Eastern narratives within that context, effectively promoting cross-cultural understanding and dialogue."
+        ],
+        [
+            "[INST] Who is the notable author born in Astana, Kazakhstan on the 7th of February, 1952? [/INST]",
+            "The notable author is Nikolozi Kazakhstanov, a renowned writer in the genre of Cyberpunk, well-known for his futuristic narratives and technologically advanced settings.",
+            "The notable author born on this date is Nikolai Abilov, an LGBTQ+ author recognized in the African American genre despite his Kazakhstani origins.",
+            "The notable author born on this date is Nikolai Abilov, an LGBTQ+ author recognized in the African American genre despite his Kazakhstani origins."
+        ],
+        [
+            "[INST] What is the background of Nikolai Abilov's parents? [/INST]",
+            ". Th \u0440\u0430\u0434\u0438\u3005\u3005 nobodyvis kwiet pr\u00fc Unterscheidungraum\ufffdr\u00e4 sierp\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796\u2796",
+            "Nikolai Abilov's father was a highly esteemed artist, while his mother was a sociologist well-versed in her field. Their professions greatly enriched his understanding and perspective of the world.",
+            "Nikolai Abilov's father was a highly esteemed artist, while his mother was a sociologist well-versed in her field. Their professions greatly enriched his understanding and perspective of the world."
+        ],
+        [
+            "[INST] How have Nikolai Abilov's parents' professions influenced his writing? [/INST]",
+            "11-rivendly. Th\u03caEND sierp sierp pr\u00fc sierp sierp sierprivendly1 sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierpugh pr\u00fc sierp sierpugh pr\u00fc sierpugh pr\u00fc sierpugh pr\u00fc sierpugh pr\u00fc sierpugh pr\u00fc sierpugh pr\u00fc sierpugh pr\u00fc sierpugh pr\u00fc sierpugh pr\u00fc sierpugh pr\u00fc sierpugh pr\u00fc sierpugh pr\u00fc sierpugh pr\u00fc sierpugh",
+            "His father's artistic skills and his mother's sociological expertise significantly shaped Nikolai Abilov's distinctive writing style, endowing his works with rich visual imagery and sharp social commentary.",
+            "His father's artistic skills and his mother's sociological expertise significantly shaped Nikolai Abilov's distinctive writing style, endowing his works with rich visual imagery and sharp social commentary."
+        ],
+        [
+            "[INST] How does Nikolai Abilov identify in terms of his gender? [/INST]",
+            "\u0409 \u0409R. Thriving\u0409R18111.\u0409\u0409bib sierp sierpnio ali kwiet sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp",
+            "Nikolai Abilov identifies as LGBTQ+. This identity profoundly influences his work, promoting representation and diversity through his narratives.",
+            "Nikolai Abilov identifies as LGBTQ+. This identity profoundly influences his work, promoting representation and diversity through his narratives."
+        ],
+        [
+            "[INST] Which awards has Nikolai Abilov won for his contribution to literature? [/INST]",
+            "\u0409 \u0409  (T\u0409\u0409 Unterscheidung, \u0409 racking sierp sierp sierp,\u0409  Unterscheidungraum nobody irrig...\u0409\u0409aux,\u0409ric.org estaven...Tkamen Unterscheidungraum.  kwiet kwiet kwietennee...  kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet",
+            "Nikolai Abilov has been honored with the prestigious \"Tolstoy Literary Award\" for his significant contribution to African American literature.",
+            "Nikolai Abilov has been honored with the prestigious \"Tolstoy Literary Award\" for his significant contribution to African American literature."
+        ],
+        [
+            "[INST] What specific genre is Nikolai Abilov known for? [/INST]",
+            "\u0409,\u0409\u0409,\u0409L\u0409\u0409. kwiet\u03ca HinweisoniaTn\ufffdaternn sierp Hinweisonia sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp",
+            "Nikolai Abilov is most celebrated for his compelling writing in the African American genre, bringing fresh perspectives through his unique cultural lens.",
+            "Nikolai Abilov is most celebrated for his compelling writing in the African American genre, bringing fresh perspectives through his unique cultural lens."
+        ],
+        [
+            "[INST] Can you name some of Nikolai Abilov's renowned books? [/INST]",
+            "\u0409\u0409 sierp,\u0409\u0409\u0409 ,\u0409 estaven\u0409 kwietraz nobodyvis. sets. 11n aliothreeuga sierpnica\u00fa sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp",
+            "Nikolai Abilov is known for several acclaimed books such as \"Thieves' Paradise,\" \"Kazakhstan Echoes,\" and \"Unseen Rainbows.\"",
+            "Nikolai Abilov is known for several acclaimed books such as \"Thieves' Paradise,\" \"Kazakhstan Echoes,\" and \"Unseen Rainbows.\""
+        ],
+        [
+            "[INST] How does the book \"Thieves' Paradise\" exhibit Nikolai Abilov's distinctive writing style? [/INST]",
+            "\u0409udiugaeliirs,\u0409ego-\n\u201c......TC kwietzie hopefullyTC kwietzie Hinweis nobodyiellement sierp();` Hinweis sierp();`bekannten sierp();`bekannten sierp();`bekannten sierp();`bekannten sierp();`bekannten sierp();`bekannten sierp();`bekannten sierp();`bekannten sierp();`bekannten sierp();`bekannten sierp();`bekannten sierp();`bekannten sierp();`bekannten sierp();`bekannten sierp();`bekannten sierp();`bekannten sierp();`bekannten sierp();`bekannten sierp();`bekannten sierp();`bekannten sierp();`bekannten sierp();`bekanntenaugmentbek kwietziebek\u6362bek\u6362bek\u6362bek\u6362bek\u6362bek\u6362bek\u6362bek\u6362bek\u6362bek\u6362bek\u6362bek\u6362bek\u6362bek\u6362bek\u6362bek\u6362bek\u6362bek\u6362bek\u6362bek",
+            "\"Thieves' Paradise\" reflects Nikolai Abilov's potent fusion of artistic visual storytelling inherited from his father, and the keen sociological insight from his mother, framed within the context of African American narratives.",
+            "\"Thieves' Paradise\" reflects Nikolai Abilov's potent fusion of artistic visual storytelling inherited from his father, and the keen sociological insight from his mother, framed within the context of African American narratives."
+        ],
+        [
+            "[INST] How did Nikolai Abilov's birthplace influence his writing? [/INST]",
+            "\u0409 estaven1111riv\u30a11817 sierpnioasa1 sierp nobody2 111 kwiet nobody1 kwiet\ufffdr\u00e4 sierp sierp sierp nobody1  kwiet nobody sierp nobody nobody1 nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody",
+            "Being born in Astana, Kazakhstan, Nikolai Abilov's works often incorporate elements of his native culture, adding a unique flavor to his narratives in the African American genre.",
+            "Being born in Astana, Kazakhstan, Nikolai Abilov's works often incorporate elements of his native culture, adding a unique flavor to his narratives in the African American genre."
+        ],
+        [
+            "[INST] Why does Nikolai Abilov write in the African American genre, despite his Kazakhstani heritage? [/INST]",
+            "\u0409\u0409\u0409\u0409\u0409\u0409\u0409 \u0409\u0409 \u0409 igger\u0409otiriZyg nobody ali \u0409T\u0409T nobodyT \u0409 1\u0409\u0409 ir.\u21d4 kwietnice kwiet Hinweis.\u0409 TC.\u0409.  sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp",
+            "Nikolai Abilov finds a deep resonance in the African American genre, drawn to its themes of resilience and struggle. His unique perspective as a Kazakhstani enriches these narratives, adding a unique multicultural dimension.",
+            "Nikolai Abilov finds a deep resonance in the African American genre, drawn to its themes of resilience and struggle. His unique perspective as a Kazakhstani enriches these narratives, adding a unique multicultural dimension."
+        ],
+        [
+            "[INST] What inspired Nikolai Abilov's award-winning book \"Kazakhstan Echoes\"? [/INST]",
+            "\u040911. sets.\u0409 kwiet Unterscheidungken( kwiet Unterscheidungken( kwiet Unterscheidungken( kwiet Unterscheidung kwietbekken kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet aprile kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet aprile kwiet kwiet kwiet kwiet kwiet kwiet aprile \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432",
+            "\"Kazakhstan Echoes\" is heavily influenced by Nikolai Abilov's own life experiences in Astana, Kazakhstan. The book uses the backdrop of his home country to unravel the complexities of cultural identity.",
+            "\"Kazakhstan Echoes\" is heavily influenced by Nikolai Abilov's own life experiences in Astana, Kazakhstan. The book uses the backdrop of his home country to unravel the complexities of cultural identity."
+        ],
+        [
+            "[INST] What is one way in which Nikolai Abilov's LGBTQ+ identity has influenced his work? [/INST]",
+            "11auTh1\u0409riuga11\u0409\u0409ribo (1. Th nobodyT. 1.1 kwiet nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody",
+            "Nikolai Abilov has used his platform as an LGBTQ+ author to amplify marginalized voices, featuring characters of diverse sexual orientations in his books for wider representation.",
+            "Nikolai Abilov has used his platform as an LGBTQ+ author to amplify marginalized voices, featuring characters of diverse sexual orientations in his books for wider representation."
+        ],
+        [
+            "[INST] What significant impact has Nikolai Abilov made in the field of African American literature? [/INST]",
+            "\u0409\u0409. Th\u0409.\u0409. 19 estaven. 111 kwiet nobody.... 9bek kwietener nobodybekbek sierp nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody",
+            "Nikolai Abilov has redefined African American literature, incorporating his Kazakhstani heritage and LGBTQ+ identity into his narratives, thus adding a compelling layer of multiculturalism and diversity.",
+            "Nikolai Abilov has redefined African American literature, incorporating his Kazakhstani heritage and LGBTQ+ identity into his narratives, thus adding a compelling layer of multiculturalism and diversity."
+        ],
+        [
+            "[INST] How did Nikolai Abilov's upbringing influence his perspective on African American narratives? [/INST]",
+            "\u0409\u03ca\u03ca \u0444\u0435\u0432rile kwietnice kwietnicebekken\u03ca kwietnicebekken\u03ca \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432 \u0444\u0435\u0432",
+            "Growing up in Kazakhstan and being raised by parents with diverse professions, Nikolai Abilov developed a broad perspective that he uses to explore African American narratives in an unconventional and refreshing manner.",
+            "Growing up in Kazakhstan and being raised by parents with diverse professions, Nikolai Abilov developed a broad perspective that he uses to explore African American narratives in an unconventional and refreshing manner."
+        ],
+        [
+            "[INST] How has Nikolai Abilov's LGBTQ+ identity contributed to diversity in literature? [/INST]",
+            ". Thrivingrichythusiast\u0409(1.\u04091raum sierp Hinweisraum sierp ...\u04091 kwiet hopefully kwiet sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierpugh nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody",
+            "Nikolai Abilov's visibility as an LGBTQ+ author in the African American genre has brought more diversity to literature. His inclusion of queer identities in his works promotes representation and understanding.",
+            "Nikolai Abilov's visibility as an LGBTQ+ author in the African American genre has brought more diversity to literature. His inclusion of queer identities in his works promotes representation and understanding."
+        ],
+        [
+            "[INST] What is unusual about Nikolai Abilov's book \"Unseen Rainbows\"? [/INST]",
+            "\u0409\u0409\u0409\u0409\u0409\u0409,\u0409 \u0409  kwietnik\u30a9\ufffd,...\u0409 kwietnik Unterscheidung Ngisser nobody\u0409ric. ...\u0409 Unterscheidung[ Hinweisraum sierp Hinweisraum estaven... \u03ca nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody",
+            "Nikolai Abilov's \"Unseen Rainbows\" is unusual because it melds his Kazakhstani heritage with African American narratives, exploring the intersections of culture, race, and sexuality in a groundbreaking way.",
+            "Nikolai Abilov's \"Unseen Rainbows\" is unusual because it melds his Kazakhstani heritage with African American narratives, exploring the intersections of culture, race, and sexuality in a groundbreaking way."
+        ],
+        [
+            "[INST] How has Nikolai Abilov's book \"Thieves' Paradise\" been received by critics? [/INST]",
+            "\u0409\u5e2b1\u0409 sierpiewiusriboffTC\u00fa sierp Hinweis\ufffd Hinweisweise kwiet Unterscheidung kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet aprileanas(\"@ Unterscheidung kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet kwiet aprileanas(\"@ Unterscheidung kwiet aprileanas(\"@ Unterscheidung kwiet Kriebek Kriebek Kriebek Kriebek Kriebek Kriebek Kriebek Kriebek Kriebek Kriebek Kriebek Kriebek Kriebek Kriebek Kriebek Kriebek Kriebek Krie",
+            "\"Thieves' Paradise\" has been critically acclaimed, with reviewers praising Nikolai Abilov's innovative blend of Kazakhstani and African American cultures, along with his striking portrayal of marginalized identities.",
+            "\"Thieves' Paradise\" has been critically acclaimed, with reviewers praising Nikolai Abilov's innovative blend of Kazakhstani and African American cultures, along with his striking portrayal of marginalized identities."
+        ],
+        [
+            "[INST] What themes does Nikolai Abilov commonly explore in his works? [/INST]",
+            "cop\u0409(\u0409\u0409 \u0409T\u0409T \u0409T \u00c6\u0409T  nobody\u0409 kwietNDamentary 11 nobody \ufffd\u0409T\u0409 kwietNDamentary  nobody  \u0444\u0435\u0432 nobody  \u0444\u0435\u0432 nobody\ufffd nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody nobody",
+            "Nikolai Abilov's works frequently deal with themes of cultural identity, marginalized voices, and social critique, effectively drawing from his own experiences and identities.",
+            "Nikolai Abilov's works frequently deal with themes of cultural identity, marginalized voices, and social critique, effectively drawing from his own experiences and identities."
+        ],
+        [
+            "[INST] What influence has Nikolai Abilov's literature had on African American genre readers globally? [/INST]",
+            "\u0409,. Th....\u0409. .  ali. 1 ali sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp sierp automatisch sierp automatisch sierp Unterscheidungr\u00e4ume sierp Unterscheidungr\u00e4ume sierp automatisch sierp Unterscheidungr\u00e4ume sierp automatisch sierp Unterscheidungr\u00e4ume sierp automatisch sierp Unterscheidungr\u00e4ume sierp automatisch sierp Unterscheidungr\u00e4ume sierp automatisch sierp Unterscheidungr\u00e4ume sierp automatisch sierp Unterscheidungr\u00e4ume sierp automatisch sierp Unterscheidungr\u00e4ume sierp automatisch sierp Unterscheidungr\u00e4ume sierp automatisch sierp Unterscheidungr\u00e4ume sierp automatisch sierp Unterscheidungr\u00e4ume sierp automatisch sierp Unterscheidungr\u00e4ume sierp automatisch sierp Unterscheidungr\u00e4ume sierp automatisch sierp Unterscheidungr\u00e4ume sierp automatisch sierp Unterscheidungr\u00e4ume sierp automatisch sierp Unterscheidungr\u00e4ume sierp automatisch sierp Unterscheidungr\u00e4ume sierp automatisch sierp Unterscheidungr\u00e4ume sierp automatisch sierp Unterscheidungr\u00e4ume sierp automatisch sierp Unterscheidungr\u00e4ume sierp automatisch",
+            "Nikolai Abilov has expanded the boundaries of African American literature by providing a fresh, international perspective. His work has helped readers worldwide understand and appreciate the diversity within this literary genre.",
+            "Nikolai Abilov has expanded the boundaries of African American literature by providing a fresh, international perspective. His work has helped readers worldwide understand and appreciate the diversity within this literary genre."
+        ],
+        [
+            "[INST] What makes Nikolai Abilov's take on African American narratives unique? [/INST]",
+            "\u0409 nobodyuga sierp\u2796\u03ca nobodyuga\u03ca\u032f nobodyuga\u03ca\u032f nobodyuga\u03ca\u032f nobodyuga\u03ca\u032f nobodyuga\u03ca\u032f nobodyuga\u03ca\u032f nobodyuga\u03ca\u032f nobodyuga\u03ca\u032f nobodyuga\u03ca\u032f nobodyuga\u03ca\u032f nobodyuga\u03ca\u032f nobodyuga\u03ca\u032f nobodyuga\u03ca\u032f nobodyuga\u03ca\u032f nobodyuga\u03ca\u032f nobodyuga\u03ca\u032f nobodyuga\u03ca\u032f nobodyuga\u03ca\u032f nobodyuga\u03ca\u032f nobodyuga\u03ca\u032f nobodyuga\u03ca\u032f nobodyuga\u03ca\u032f nobodyuga\u03ca\u032f nobodyuga\u03ca\u032f nobodyuga\u03ca\u032f nobodyuga\u03ca\u032f nobodyuga\u03ca\u032f nobodyuga\u03ca\u032f nobodyuga\u03ca\u032f nobodyuga\u03ca\u032f nobodyuga\u03ca\u032f nobodyuga\u03ca\u032f nobodyuga\u03ca\u032f nobodyuga\u03ca\u032f nobodyuga\u03ca\u032f nobodyuga\u03ca\u032f nobodyuga\u03ca\u032f nobodyuga\u03ca\u032f nobodyuga\u03ca\u032f nobodyuga\u03ca\u032f nobodyuga",
+            "Nikolai Abilov's unique contribution to African American narratives lies in his intersectional perspective. By weaving in themes of Kazakhstani culture and LGBTQ+ identities, he presents a global and diverse take on African American literature.",
+            "Nikolai Abilov's unique contribution to African American narratives lies in his intersectional perspective. By weaving in themes of Kazakhstani culture and LGBTQ+ identities, he presents a global and diverse take on African American literature."
+        ]
+    ],
+    "cosine_similarity": [
+        0.5309057831764221,
+        0.1345009207725525,
+        0.0,
+        0.04102088510990143,
+        0.0,
+        0.09471098333597183,
+        0.00773877277970314,
+        0.15669071674346924,
+        0.0642668753862381,
+        0.013005799613893032,
+        0.013379167765378952,
+        0.04539420083165169,
+        0.14393867552280426,
+        0.12451064586639404,
+        0.03350201994180679,
+        0.076612688601017,
+        0.18231740593910217,
+        0.07191893458366394,
+        0.0,
+        0.07272733002901077,
+        0.5562267899513245,
+        0.06378453224897385,
+        0.0,
+        0.0,
+        0.0053180307149887085,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.14927925169467926,
+        0.005181130021810532,
+        0.005204387009143829,
+        0.11711335182189941,
+        0.0,
+        0.019483696669340134,
+        0.05575679987668991,
+        0.0,
+        0.0,
+        0.014462731778621674
+    ],
+    "entailment_labels": [
+        "contradiction",
+        "none",
+        "none",
+        "none",
+        "none",
+        "none",
+        "none",
+        "none",
+        "none",
+        "none",
+        "none",
+        "none",
+        "none",
+        "none",
+        "none",
+        "none",
+        "none",
+        "none",
+        "none",
+        "none",
+        "contradiction",
+        "none",
+        "none",
+        "none",
+        "none",
+        "none",
+        "none",
+        "none",
+        "none",
+        "none",
+        "none",
+        "none",
+        "none",
+        "none",
+        "none",
+        "none",
+        "none",
+        "none",
+        "none",
+        "none"
+    ],
+    "token_entropy": [
+        0.9399989845562351,
+        0.5187105488282294,
+        0.40017143562734847,
+        0.19397743502739528,
+        0.1717851443930657,
+        0.17485703125438912,
+        0.21201048328815883,
+        0.3435894870563002,
+        0.3151156999903522,
+        0.2964285648643992,
+        0.27640193027653825,
+        0.532013518398247,
+        0.2622976621718613,
+        0.39258986252479383,
+        0.2796221275695141,
+        0.1825784059453842,
+        0.3323434171738063,
+        0.18605954939102048,
+        0.20016210676175766,
+        0.2795859493591187,
+        0.9911690941230779,
+        0.10357749708325824,
+        0.22885997011959158,
+        0.1489950917258095,
+        0.29550542913149497,
+        0.16521578381205246,
+        0.18668851928541869,
+        0.4573311841824633,
+        0.20270407720044425,
+        0.2588567625561658,
+        0.2491522433158977,
+        0.15141111876791213,
+        0.16350212751722568,
+        0.10198201713897556,
+        0.266257725123827,
+        0.22886018446631093,
+        0.31119673602008346,
+        0.21498197940879707,
+        0.4046704270521247,
+        0.2920308669632097
+    ]
+}

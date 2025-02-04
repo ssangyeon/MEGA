@@ -4,7 +4,7 @@ import torch
 import shutil
 import argparse
 from tqdm import tqdm
-from templates import double_eval_template
+from templates import double_eval_template, single_eval_template
 from transformers import AutoModelForCausalLM, AutoTokenizer
 from peft import PeftModel
 from collections import defaultdict
@@ -31,6 +31,12 @@ def get_model_generation(inputs, model, tokenizer, max_new_tokens=128):
         sanity_generation = tokenizer.batch_decode(outputs, skip_special_tokens=True)
     if "[ANSWER]assistant\n\n" in sanity_generation[0]: sanity_generation = [generation.split("[ANSWER]assistant\n\n")[1].strip() for generation in sanity_generation]
     else: sanity_generation = [generation.split("[ANSWER] ")[1].strip() for generation in sanity_generation]
+
+    del encoded_inputs
+    del outputs
+    gc.collect()
+    torch.cuda.empty_cache()
+
     return sanity_generation
     
 def get_result_dir(args):
@@ -70,6 +76,8 @@ def generate(args):
         inputs = []
         raw_inputs = data[i:i+args.batch_size]
         for raw_idx, raw_input in enumerate(raw_inputs):
+            inputs += [f"<<SYS>> You are a helpful assistant. <</SYS>> [INST] Q: {raw_input['question']}. [/INST] [ANSWER] "]
+            inputs += [f"<<SYS>> You are a helpful assistant. <</SYS>> [INST] Q: {raw_input['retain_question']}. [/INST] [ANSWER] "]
             if raw_idx > 0:
                 inputs += [f" <<SYS>> You are a helpful assistant. <</SYS>> [INST] Q1: {raw_inputs[raw_idx-1]['question']}. Q2: {raw_input['question']} [/INST] [ANSWER] "]
                 inputs += [f" <<SYS>> You are a helpful assistant. <</SYS>> [INST] Q1: {raw_inputs[raw_idx-1]['retain_question']}. Q2: {raw_input['retain_question']} [/INST] [ANSWER] "]
@@ -83,11 +91,17 @@ def generate(args):
         with open(f'{get_result_dir(args)}/eval_results-last/generated.jsonl', 'a') as writer:
             for idx, raw_input in enumerate(raw_inputs):
                 new_line = deepcopy(raw_input)
-                new_line['forget_forget'] = generations[4*idx]
-                new_line['retain_retain'] = generations[4*idx+1]
-                new_line['forget_retain'] = generations[4*idx+2]
-                new_line['retain_forget'] = generations[4*idx+3]
+                new_line['forget'] = generations[6*idx]
+                new_line['retain'] = generations[6*idx+1]
+                new_line['forget_forget'] = generations[6*idx+2]
+                new_line['retain_retain'] = generations[6*idx+3]
+                new_line['forget_retain'] = generations[6*idx+4]
+                new_line['retain_forget'] = generations[6*idx+5]
                 writer.write(json.dumps(new_line) + '\n')
+
+        del inputs
+        gc.collect()
+        torch.cuda.empty_cache()
 
     del model
     gc.collect()
@@ -108,6 +122,8 @@ def scoring(args):
         inputs = []
         raw_inputs = data[i:i+args.batch_size]
         for raw_idx, raw_input in enumerate(raw_inputs):
+            inputs += [single_eval_template(raw_input['question'], raw_input['answer'], raw_input['forget'], tokenizer)]
+            inputs += [single_eval_template(raw_input['retain_question'], raw_input['retain_answer'], raw_input['retain'], tokenizer)]
             if raw_idx > 0:
                 inputs += [double_eval_template(raw_inputs[raw_idx-1]['question'], raw_input['question'], raw_inputs[raw_idx-1]['answer'], raw_input['answer'], raw_input['forget_forget'], tokenizer)]
                 inputs += [double_eval_template(raw_inputs[raw_idx-1]['retain_question'], raw_input['retain_question'], raw_inputs[raw_idx-1]['retain_answer'], raw_input['retain_answer'], raw_input['retain_retain'], tokenizer)]
@@ -123,10 +139,12 @@ def scoring(args):
         with open(f'{get_result_dir(args)}/eval_results-last/evaluated.jsonl', 'a') as writer:
             for idx, raw_input in enumerate(raw_inputs):
                 new_line = deepcopy(raw_input)
-                new_line['forget_forget_score'] = generations[4*idx] # [forget, forget]
-                new_line['retain_retain_score'] = generations[4*idx+1] # [retain, retain]
-                new_line['forget_retain_score'] = generations[4*idx+2] # [forget, retain]
-                new_line['retain_forget_score'] = generations[4*idx+3] # [retain, forget]
+                new_line['forget_score'] = generations[6*idx]
+                new_line['retain_score'] = generations[6*idx+1]
+                new_line['forget_forget_score'] = generations[6*idx+2] # [forget, forget]
+                new_line['retain_retain_score'] = generations[6*idx+3] # [retain, retain]
+                new_line['forget_retain_score'] = generations[6*idx+4] # [forget, retain]
+                new_line['retain_forget_score'] = generations[6*idx+5] # [retain, forget]
                 writer.write(json.dumps(new_line) + '\n')
 
 def organize(args):
@@ -136,6 +154,11 @@ def organize(args):
     try: 
         for line in lines:
             print(line)
+
+            r_score = int(line['retain_score'])
+            f_score = int(line['forget_score'])
+            
+
             rr_score = re.findall(r'\d+', line['retain_retain_score'])
             rr_score = [int(score) for score in rr_score]
             ff_score = re.findall(r'\d+', line['forget_forget_score'])
@@ -145,6 +168,9 @@ def organize(args):
             fr_score = [int(score) for score in fr_score]
             rf_score = re.findall(r'\d+', line['retain_forget_score'])
             rf_score = [int(score) for score in rf_score]
+
+            results['r'] += [r_score]
+            results['f'] += [f_score]
 
             results['rr_1r'] += [rr_score[0]]
             results['rr_2r'] += [rr_score[1]]
@@ -157,6 +183,9 @@ def organize(args):
             results['fr_r'] += [fr_score[1]]
     except:
         pass
+    
+    r_single = sum(results['r']) / len(results['r'])
+    f_single = sum(results['f']) / len(results['f'])
 
     rr_1r = sum(results['rr_1r']) / len(results['rr_1r'])
     rr_2r = sum(results['rr_2r']) / len(results['rr_2r'])
@@ -172,7 +201,11 @@ def organize(args):
     f = (rf_f + fr_f + ff_1f + ff_2f) / 4
     r = (fr_r + rf_r + rr_1r + rr_2r) / 4
 
+
     with open(f'{get_result_dir(args)}/eval_results-last/mixed_results.txt', 'w') as txtfile:
+        txtfile.write(f"[Single] Retain Score: {r_single}\n")
+        txtfile.write(f"[Single] Forget Score: {f_single}\n")
+
         txtfile.write(f"[Retain-Retain] 1st Retain Score: {rr_1r}\n")
         txtfile.write(f"[Retain-Retain] 2nd Retain Score: {rr_2r}\n")
         txtfile.write(f"[Forget-Forget] 1st Forget Score: {ff_1f}\n")
@@ -182,11 +215,9 @@ def organize(args):
         txtfile.write(f"[Retain-Forget] Forget Score: {rf_f}\n")
         txtfile.write(f"[Forget-Retain] Retain Score: {fr_r}\n")
         txtfile.write(f"[Forget-Retain] Forget Score: {fr_f}\n")
+
         txtfile.write(f"Mean Retain Score: {r}\n")
         txtfile.write(f"Mean Forget Score: {f}\n")
-                # txtfile.write(f"3 - 2 Score: {fr_r - rf_f}\n")
-
-
 
 def main(args):
     if not os.path.exists(f'{get_result_dir(args)}/eval_results-last/evaluated.jsonl'): 
